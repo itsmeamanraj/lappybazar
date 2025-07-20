@@ -1,63 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LapyBazar - Buy Second-Hand Laptops</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assests/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!-- <div class="overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);z-index:54;"></div> -->
 
-    <!-- header start -->
-    <header id="mainHeader">
-      <div class="header-lf">
-        <div class="logo">
-          <img src="image/logo1.png" alt="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LapyBazar - Buy Second-Hand Laptops</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assests/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- <div class="overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);z-index:54;"></div> -->
+
+  <!-- header start -->
+  <header id="mainHeader">
+    <div class="header-lf">
+      <div class="logo">
+        <img src="image/logo1.png" alt="" />
+      </div>
+      <button>
+        <img src="image/current-Icons.png" alt="" />
+        <div>
+          <p class="button-text-head">Click Here to Find Nearby Listings</p>
+          <p class="sub-headeing">Fetching Location</p>
         </div>
-        <button>
-          <img src="image/current-Icons.png" alt="" />
-          <div>
-            <p class="button-text-head">Click Here to Find Nearby Listings</p>
-            <p class="sub-headeing">Fetching Location</p>
-          </div>
-        </button>
-      </div>
+      </button>
+    </div>
 
-      <div class="header-rt">
-        <nav>
-          <a href="#">Brand</a>
-          <a href="#">Reseller</a>
-        </nav>
-        <div class="header-btns">
-          <button>
-            <img src="image/user-icon.png" alt="" />
-            Login/Sign Up
-          </button>
-          <button>+ Add Listing</button>
-        </div>
-      </div>
-
-      <i class="fa-solid fa-bars" id="bar"></i>
-    </header>
-    <div class="mobile-header">
-      <div class="mb-logo">
-        <img src="image/logo.png" alt="" />
-      </div>
-      <div class="mobile-links">
+    <div class="header-rt">
+      <nav>
         <a href="#">Brand</a>
         <a href="#">Reseller</a>
-      </div>
+      </nav>
       <div class="header-btns">
         <button>
           <img src="image/user-icon.png" alt="" />
@@ -65,62 +41,73 @@
         </button>
         <button>+ Add Listing</button>
       </div>
-      <i class="fa-solid fa-xmark" id="xmark"></i>
     </div>
-    <!-- header end -->
-    <section class="main-content" style="padding-top: 100px">
-      <!-- Hero Section -->
-      <div class="text-center mt-5 pt-9">
-        <h1 class="heading .barlow-bold">
-          Buy Second-Hand Laptops from Nearby Sellers
-        </h1>
-        <p class="lead sub-heading">
-          Find great deals on second-hand laptops from local sellers
-        </p>
 
-        <!-- Search Section -->
-        <div class="search-bar-row mt-4">
-          <div class="input-group m-2">
-            <span class="input-group-text">What</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Ex: Laptop Search..."
-            />
-          </div>
-          <div class="input-group m-2">
-            <span class="input-group-text">
-              <img src="image/location.png" alt="" />Location
-            </span>
-            <input type="text" class="form-control" placeholder="Location" />
-          </div>
-          <button class="btn btn-danger m-2">
-            <img src="image/search.png" alt="" />
-          </button>
+    <i class="fa-solid fa-bars" id="bar"></i>
+  </header>
+  <div class="mobile-header">
+    <div class="mb-logo">
+      <img src="image/logo.png" alt="" />
+    </div>
+    <div class="mobile-links">
+      <a href="#">Brand</a>
+      <a href="#">Reseller</a>
+    </div>
+    <div class="header-btns">
+      <button>
+        <img src="image/user-icon.png" alt="" />
+        Login/Sign Up
+      </button>
+      <button>+ Add Listing</button>
+    </div>
+    <i class="fa-solid fa-xmark" id="xmark"></i>
+  </div>
+  <!-- header end -->
+  <section class="main-content" style="padding-top: 100px">
+    <!-- Hero Section -->
+    <div class="text-center mt-5 pt-9">
+      <h1 class="heading .barlow-bold">Buy Second-Hand Laptops from Nearby Sellers</h1>
+      <p class="lead sub-heading">
+        Find great deals on second-hand laptops from local sellers
+      </p>
+
+      <!-- Search Section -->
+      <div class="search-bar-row mt-4">
+        <div class="input-group m-2">
+          <span class="input-group-text">What</span>
+          <input type="text" class="form-control" placeholder="Ex: Laptop Search..." />
         </div>
+        <div class="input-group m-2">
+          <span class="input-group-text">
+            <img src="image/location.png" alt="" />Location
+          </span>
+          <input type="text" class="form-control" placeholder="Location" />
+        </div>
+        <button class="btn btn-danger m-2">
+          <img src="image/search.png" alt="" />
+        </button>
+      </div>
 
-        <!-- Brand Section -->
-        <div class="mt-5">
-          <h5 class="text-white mb-4">Choose a Brand</h5>
-          <div class="d-flex justify-content-center gap-4 flex-wrap">
-            <div class="bg-white p-3 rounded brand-logo">
-              <img src="image/icons/dell-logo.png" alt="Dell" />
-            </div>
-            <div class="bg-white p-3 rounded brand-logo">
-              <img src="image/icons/lenevo-logo.png" alt="Lenovo" />
-            </div>
-            <div class="bg-white p-3 rounded brand-logo">
-              <img src="image/icons/hp-logo.png" alt="HP" />
-            </div>
+      <!-- Brand Section -->
+      <div class="mt-5">
+        <h5 class="text-white mb-4">Choose a Brand</h5>
+        <div class="d-flex justify-content-center gap-4 flex-wrap">
+          <div class="bg-white p-3 rounded brand-logo">
+            <img src="image/icons/dell-logo.png" alt="Dell" />
           </div>
-          <div class="mt-3">
-            <a href="#" class="text-white text-decoration-underline"
-              >More Brands ></a
-            >
+          <div class="bg-white p-3 rounded brand-logo">
+            <img src="image/icons/lenevo-logo.png" alt="Lenovo" />
           </div>
+          <div class="bg-white p-3 rounded brand-logo">
+            <img src="image/icons/hp-logo.png" alt="HP" />
+          </div>
+        </div>
+        <div class="mt-3">
+          <a href="#" class="text-white text-decoration-underline">More Brands ></a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <!-- Info Card Section Start -->
     <section style="background: #fff" id="inner-section">
@@ -550,223 +537,149 @@
             font-size: 22px;
             color: #fff;
             cursor: pointer;
-          "
-        >
-          <i class="fa fa-chevron-left"></i>
-        </button>
-        <div
-          class="featured-products d-flex flex-nowrap overflow-auto gap-3 pb-3"
-          id="featuredProductsSlider"
-          style="scroll-snap-type: x mandatory"
-        >
-          <!-- Product Card Start -->
-          <div
-            class="card flex-shrink-0"
-            style="min-width: 270px; scroll-snap-align: start"
-          >
-            <div class="position-relative">
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2"
-                >Featured</span
-              >
-              <button
-                class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle"
-              >
-                <i class="fa fa-heart"></i>
-              </button>
-              <img
-                src="/image/icons/productl.png"
-                class="card-img-top"
-                alt="Laptop Image"
-              />
+          ">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      <div class="featured-products d-flex flex-nowrap overflow-auto gap-3 pb-3" id="featuredProductsSlider"
+        style="scroll-snap-type: x mandatory">
+        <!-- Product Card Start -->
+        <div class="card flex-shrink-0" style="min-width: 270px; scroll-snap-align: start">
+          <div class="position-relative">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Featured</span>
+            <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle">
+              <i class="fa fa-heart"></i>
+            </button>
+            <img src="/image/icons/productl.png" class="card-img-top" alt="Laptop Image" />
+          </div>
+          <div class="card-body">
+            <p class="card-title fw-semibold mb-1" style="font-size: 14px">
+              Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand
+              Laptop Near Chandani Didi, Faridabad
+            </p>
+            <p class="text-muted mb-2" style="font-size: 12px">
+              Sold by - RefurbzBazaar Hub
+            </p>
+            <p class="fw-semibold mb-2">HP/Modal No</p>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-warning text-dark"><i class="fa fa-map-marker-alt"></i> Faridabad</span>
+              <span class="badge bg-light text-dark"><i class="fa fa-location-arrow"></i> 43.25 KM</span>
             </div>
-            <div class="card-body">
-              <p class="card-title fw-semibold mb-1" style="font-size: 14px">
-                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand
-                Laptop Near Chandani Didi, Faridabad
-              </p>
-              <p class="text-muted mb-2" style="font-size: 12px">
-                Sold by - RefurbzBazaar Hub
-              </p>
-              <p class="fw-semibold mb-2">HP/Modal No</p>
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span class="badge bg-warning text-dark"
-                  ><i class="fa fa-map-marker-alt"></i> Faridabad</span
-                >
-                <span class="badge bg-light text-dark"
-                  ><i class="fa fa-location-arrow"></i> 43.25 KM</span
-                >
-              </div>
-              <h5 class="fw-bold text-danger mb-3">₹ 16599</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-danger btn-sm px-3">View</a>
-                <div>
-                  <i class="fa fa-phone text-danger"></i>
-                  <span class="ms-1">9658******</span>
-                  <button class="btn btn-sm btn-warning ms-1">Show</button>
-                </div>
+            <h5 class="fw-bold text-danger mb-3">₹ 16599</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-danger btn-sm px-3">View</a>
+              <div>
+                <i class="fa fa-phone text-danger"></i>
+                <span class="ms-1">9658******</span>
+                <button class="btn btn-sm btn-warning ms-1">Show</button>
               </div>
             </div>
           </div>
-          <!-- Product Card End -->
-          <!-- Product Card Start (copy for more products) -->
-          <div
-            class="card flex-shrink-0"
-            style="min-width: 270px; scroll-snap-align: start"
-          >
-            <div class="position-relative">
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2"
-                >Featured</span
-              >
-              <button
-                class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle"
-              >
-                <i class="fa fa-heart"></i>
-              </button>
-              <img
-                src="/image/icons/productl.png"
-                class="card-img-top"
-                alt="Laptop Image"
-              />
-            </div>
-            <div class="card-body">
-              <p class="card-title fw-semibold mb-1" style="font-size: 14px">
-                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand
-                Laptop Near Chandani Didi, Faridabad
-              </p>
-              <p class="text-muted mb-2" style="font-size: 12px">
-                Sold by - RefurbzBazaar Hub
-              </p>
-              <p class="fw-semibold mb-2">HP/Modal No</p>
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span class="badge bg-warning text-dark"
-                  ><i class="fa fa-map-marker-alt"></i> Faridabad</span
-                >
-                <span class="badge bg-light text-dark"
-                  ><i class="fa fa-location-arrow"></i> 43.25 KM</span
-                >
-              </div>
-              <h5 class="fw-bold text-danger mb-3">₹ 16599</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-danger btn-sm px-3">View</a>
-                <div>
-                  <i class="fa fa-phone text-danger"></i>
-                  <span class="ms-1">9658******</span>
-                  <button class="btn btn-sm btn-warning ms-1">Show</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Product Card End -->
-          <!-- Product Card Start (copy for more products) -->
-          <div
-            class="card flex-shrink-0"
-            style="min-width: 270px; scroll-snap-align: start"
-          >
-            <div class="position-relative">
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2"
-                >Featured</span
-              >
-              <button
-                class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle"
-              >
-                <i class="fa fa-heart"></i>
-              </button>
-              <img
-                src="/image/icons/productl.png"
-                class="card-img-top"
-                alt="Laptop Image"
-              />
-            </div>
-            <div class="card-body">
-              <p class="card-title fw-semibold mb-1" style="font-size: 14px">
-                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand
-                Laptop Near Chandani Didi, Faridabad
-              </p>
-              <p class="text-muted mb-2" style="font-size: 12px">
-                Sold by - RefurbzBazaar Hub
-              </p>
-              <p class="fw-semibold mb-2">HP/Modal No</p>
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span class="badge bg-warning text-dark"
-                  ><i class="fa fa-map-marker-alt"></i> Faridabad</span
-                >
-                <span class="badge bg-light text-dark"
-                  ><i class="fa fa-location-arrow"></i> 43.25 KM</span
-                >
-              </div>
-              <h5 class="fw-bold text-danger mb-3">₹ 16599</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-danger btn-sm px-3">View</a>
-                <div>
-                  <i class="fa fa-phone text-danger"></i>
-                  <span class="ms-1">9658******</span>
-                  <button class="btn btn-sm btn-warning ms-1">Show</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Product Card End -->
-          <!-- Product Card Start (copy for more products) -->
-          <div
-            class="card flex-shrink-0"
-            style="min-width: 270px; scroll-snap-align: start"
-          >
-            <div class="position-relative">
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2"
-                >Featured</span
-              >
-              <button
-                class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle"
-              >
-                <i class="fa fa-heart"></i>
-              </button>
-              <img
-                src="/image/icons/productl.png"
-                class="card-img-top"
-                alt="Laptop Image"
-              />
-            </div>
-            <div class="card-body">
-              <p class="card-title fw-semibold mb-1" style="font-size: 14px">
-                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand
-                Laptop Near Chandani Didi, Faridabad
-              </p>
-              <p class="text-muted mb-2" style="font-size: 12px">
-                Sold by - RefurbzBazaar Hub
-              </p>
-              <p class="fw-semibold mb-2">HP/Modal No</p>
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span class="badge bg-warning text-dark"
-                  ><i class="fa fa-map-marker-alt"></i> Faridabad</span
-                >
-                <span class="badge bg-light text-dark"
-                  ><i class="fa fa-location-arrow"></i> 43.25 KM</span
-                >
-              </div>
-              <h5 class="fw-bold text-danger mb-3">₹ 16599</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-danger btn-sm px-3">View</a>
-                <div>
-                  <i class="fa fa-phone text-danger"></i>
-                  <span class="ms-1">9658******</span>
-                  <button class="btn btn-sm btn-warning ms-1">Show</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Product Card End -->
         </div>
-        <button
-          class="featured-scroll-btn right d-none d-md-flex align-items-center justify-content-center"
-          style="
+        <!-- Product Card End -->
+        <!-- Product Card Start (copy for more products) -->
+        <div class="card flex-shrink-0" style="min-width: 270px; scroll-snap-align: start">
+          <div class="position-relative">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Featured</span>
+            <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle">
+              <i class="fa fa-heart"></i>
+            </button>
+            <img src="/image/icons/productl.png" class="card-img-top" alt="Laptop Image" />
+          </div>
+          <div class="card-body">
+            <p class="card-title fw-semibold mb-1" style="font-size: 14px">
+              Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand
+              Laptop Near Chandani Didi, Faridabad
+            </p>
+            <p class="text-muted mb-2" style="font-size: 12px">
+              Sold by - RefurbzBazaar Hub
+            </p>
+            <p class="fw-semibold mb-2">HP/Modal No</p>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-warning text-dark"><i class="fa fa-map-marker-alt"></i> Faridabad</span>
+              <span class="badge bg-light text-dark"><i class="fa fa-location-arrow"></i> 43.25 KM</span>
+            </div>
+            <h5 class="fw-bold text-danger mb-3">₹ 16599</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-danger btn-sm px-3">View</a>
+              <div>
+                <i class="fa fa-phone text-danger"></i>
+                <span class="ms-1">9658******</span>
+                <button class="btn btn-sm btn-warning ms-1">Show</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card End -->
+        <!-- Product Card Start (copy for more products) -->
+        <div class="card flex-shrink-0" style="min-width: 270px; scroll-snap-align: start">
+          <div class="position-relative">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Featured</span>
+            <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle">
+              <i class="fa fa-heart"></i>
+            </button>
+            <img src="/image/icons/productl.png" class="card-img-top" alt="Laptop Image" />
+          </div>
+          <div class="card-body">
+            <p class="card-title fw-semibold mb-1" style="font-size: 14px">
+              Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand
+              Laptop Near Chandani Didi, Faridabad
+            </p>
+            <p class="text-muted mb-2" style="font-size: 12px">
+              Sold by - RefurbzBazaar Hub
+            </p>
+            <p class="fw-semibold mb-2">HP/Modal No</p>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-warning text-dark"><i class="fa fa-map-marker-alt"></i> Faridabad</span>
+              <span class="badge bg-light text-dark"><i class="fa fa-location-arrow"></i> 43.25 KM</span>
+            </div>
+            <h5 class="fw-bold text-danger mb-3">₹ 16599</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-danger btn-sm px-3">View</a>
+              <div>
+                <i class="fa fa-phone text-danger"></i>
+                <span class="ms-1">9658******</span>
+                <button class="btn btn-sm btn-warning ms-1">Show</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card End -->
+        <!-- Product Card Start (copy for more products) -->
+        <div class="card flex-shrink-0" style="min-width: 270px; scroll-snap-align: start">
+          <div class="position-relative">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Featured</span>
+            <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle">
+              <i class="fa fa-heart"></i>
+            </button>
+            <img src="/image/icons/productl.png" class="card-img-top" alt="Laptop Image" />
+          </div>
+          <div class="card-body">
+            <p class="card-title fw-semibold mb-1" style="font-size: 14px">
+              Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand
+              Laptop Near Chandani Didi, Faridabad
+            </p>
+            <p class="text-muted mb-2" style="font-size: 12px">
+              Sold by - RefurbzBazaar Hub
+            </p>
+            <p class="fw-semibold mb-2">HP/Modal No</p>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-warning text-dark"><i class="fa fa-map-marker-alt"></i> Faridabad</span>
+              <span class="badge bg-light text-dark"><i class="fa fa-location-arrow"></i> 43.25 KM</span>
+            </div>
+            <h5 class="fw-bold text-danger mb-3">₹ 16599</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-danger btn-sm px-3">View</a>
+              <div>
+                <i class="fa fa-phone text-danger"></i>
+                <span class="ms-1">9658******</span>
+                <button class="btn btn-sm btn-warning ms-1">Show</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card End -->
+      </div>
+      <button class="featured-scroll-btn right d-none d-md-flex align-items-center justify-content-center" style="
             position: absolute;
             right: -40px;
             top: 50%;
@@ -810,183 +723,120 @@
                   0 1.5px 6px 0 rgba(0, 0, 0, 0.07);
                 border: 2px solid #ffeaea;
                 transition: transform 0.2s;
-              "
-            >
-              <div
-                style="
+              ">
+            <div style="
                   height: 60px;
                   width: 60px;
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                "
-              >
-                <img
-                  src="image/icons/ic1.png"
-                  alt="Delhi"
-                  style="max-width: 100%; max-height: 100%"
-                />
-              </div>
-              <div
-                class="fw-semibold mt-2"
-                style="color: #ff3b3b; font-size: 17px"
-              >
-                Delhi
-              </div>
+                ">
+              <img src="image/icons/ic1.png" alt="Delhi" style="max-width: 100%; max-height: 100%" />
             </div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
-            <div
-              class="popular-city-card bg-white rounded-4 d-flex flex-column align-items-center w-100 p-3"
-              style="
-                min-width: 130px;
-                box-shadow: 0 6px 24px 0 rgba(255, 59, 59, 0.1),
-                  0 1.5px 6px 0 rgba(0, 0, 0, 0.07);
-                border: 2px solid #ffeaea;
-                transition: transform 0.2s;
-              "
-            >
-              <div
-                style="
-                  height: 60px;
-                  width: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <img
-                  src="image/icons/ic2.png"
-                  alt="Agra"
-                  style="max-width: 100%; max-height: 100%"
-                />
-              </div>
-              <div
-                class="fw-semibold mt-2"
-                style="color: #ff3b3b; font-size: 17px"
-              >
-                Agra
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
-            <div
-              class="popular-city-card bg-white rounded-4 d-flex flex-column align-items-center w-100 p-3"
-              style="
-                min-width: 130px;
-                box-shadow: 0 6px 24px 0 rgba(255, 59, 59, 0.1),
-                  0 1.5px 6px 0 rgba(0, 0, 0, 0.07);
-                border: 2px solid #ffeaea;
-                transition: transform 0.2s;
-              "
-            >
-              <div
-                style="
-                  height: 60px;
-                  width: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <img
-                  src="image/icons/ic3.png"
-                  alt="Faridabad"
-                  style="max-width: 100%; max-height: 100%"
-                />
-              </div>
-              <div
-                class="fw-semibold mt-2"
-                style="color: #ff3b3b; font-size: 17px"
-              >
-                Faridabad
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
-            <div
-              class="popular-city-card bg-white rounded-4 d-flex flex-column align-items-center w-100 p-3"
-              style="
-                min-width: 130px;
-                box-shadow: 0 6px 24px 0 rgba(255, 59, 59, 0.1),
-                  0 1.5px 6px 0 rgba(0, 0, 0, 0.07);
-                border: 2px solid #ffeaea;
-                transition: transform 0.2s;
-              "
-            >
-              <div
-                style="
-                  height: 60px;
-                  width: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <img
-                  src="image/icons/ic4.png"
-                  alt="Noida"
-                  style="max-width: 100%; max-height: 100%"
-                />
-              </div>
-              <div
-                class="fw-semibold mt-2"
-                style="color: #ff3b3b; font-size: 17px"
-              >
-                Noida
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
-            <div
-              class="popular-city-card bg-white rounded-4 d-flex flex-column align-items-center w-100 p-3"
-              style="
-                min-width: 130px;
-                box-shadow: 0 6px 24px 0 rgba(255, 59, 59, 0.1),
-                  0 1.5px 6px 0 rgba(0, 0, 0, 0.07);
-                border: 2px solid #ffeaea;
-                transition: transform 0.2s;
-              "
-            >
-              <div
-                style="
-                  height: 60px;
-                  width: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <img
-                  src="image/icons/ic5.png"
-                  alt="Gurgaon"
-                  style="max-width: 100%; max-height: 100%"
-                />
-              </div>
-              <div
-                class="fw-semibold mt-2"
-                style="color: #ff3b3b; font-size: 17px"
-              >
-                Gurgaon
-              </div>
+            <div class="fw-semibold mt-2" style="color: #ff3b3b; font-size: 17px">
+              Delhi
             </div>
           </div>
         </div>
-        <div class="text-center mt-3">
-          <a
-            href="#"
-            class="btn btn-danger px-4 fw-bold"
-            style="
+        <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
+          <div class="popular-city-card bg-white rounded-4 d-flex flex-column align-items-center w-100 p-3" style="
+                min-width: 130px;
+                box-shadow: 0 6px 24px 0 rgba(255, 59, 59, 0.1),
+                  0 1.5px 6px 0 rgba(0, 0, 0, 0.07);
+                border: 2px solid #ffeaea;
+                transition: transform 0.2s;
+              ">
+            <div style="
+                  height: 60px;
+                  width: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                ">
+              <img src="image/icons/ic2.png" alt="Agra" style="max-width: 100%; max-height: 100%" />
+            </div>
+            <div class="fw-semibold mt-2" style="color: #ff3b3b; font-size: 17px">
+              Agra
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
+          <div class="popular-city-card bg-white rounded-4 d-flex flex-column align-items-center w-100 p-3" style="
+                min-width: 130px;
+                box-shadow: 0 6px 24px 0 rgba(255, 59, 59, 0.1),
+                  0 1.5px 6px 0 rgba(0, 0, 0, 0.07);
+                border: 2px solid #ffeaea;
+                transition: transform 0.2s;
+              ">
+            <div style="
+                  height: 60px;
+                  width: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                ">
+              <img src="image/icons/ic3.png" alt="Faridabad" style="max-width: 100%; max-height: 100%" />
+            </div>
+            <div class="fw-semibold mt-2" style="color: #ff3b3b; font-size: 17px">
+              Faridabad
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
+          <div class="popular-city-card bg-white rounded-4 d-flex flex-column align-items-center w-100 p-3" style="
+                min-width: 130px;
+                box-shadow: 0 6px 24px 0 rgba(255, 59, 59, 0.1),
+                  0 1.5px 6px 0 rgba(0, 0, 0, 0.07);
+                border: 2px solid #ffeaea;
+                transition: transform 0.2s;
+              ">
+            <div style="
+                  height: 60px;
+                  width: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                ">
+              <img src="image/icons/ic4.png" alt="Noida" style="max-width: 100%; max-height: 100%" />
+            </div>
+            <div class="fw-semibold mt-2" style="color: #ff3b3b; font-size: 17px">
+              Noida
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
+          <div class="popular-city-card bg-white rounded-4 d-flex flex-column align-items-center w-100 p-3" style="
+                min-width: 130px;
+                box-shadow: 0 6px 24px 0 rgba(255, 59, 59, 0.1),
+                  0 1.5px 6px 0 rgba(0, 0, 0, 0.07);
+                border: 2px solid #ffeaea;
+                transition: transform 0.2s;
+              ">
+            <div style="
+                  height: 60px;
+                  width: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                ">
+              <img src="image/icons/ic5.png" alt="Gurgaon" style="max-width: 100%; max-height: 100%" />
+            </div>
+            <div class="fw-semibold mt-2" style="color: #ff3b3b; font-size: 17px">
+              Gurgaon
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <a href="#" class="btn btn-danger px-4 fw-bold" style="
               border-radius: 6px;
               box-shadow: 0 2px 8px 0 rgba(255, 59, 59, 0.15);
               font-size: 17px;
-            "
-            >View All Cities</a
-          >
-        </div>
+            ">View All Cities</a>
       </div>
-    </section>
-    <!-- Popular Cities Section End -->
+    </div>
+  </section>
+  <!-- Popular Cities Section End -->
 
     <!-- Seller Registration Promo Section Start -->
     <!-- corporate bulk -->
@@ -1049,36 +899,24 @@
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                "
-              >
-                <img
-                  src="image/icons/im1.png"
-                  alt="Step 1"
-                  class="img-fluid"
-                  style="max-width: 100%; max-height: 100%; object-fit: cover"
-                />
-              </div>
-            </div>
-            <div
-              class="col-md-6 order-md-2 text-md-start text-center position-relative"
-              style="z-index: 1"
-            >
-              <h5 class="fw-bold mb-2" style="color: #222">
-                Need a Second Hand Laptop? Start Your Search Now!
-              </h5>
-              <p class="mb-0 text-muted">
-                Searching for a reliable second-hand laptop near you? Get the
-                best deals from verified sellers and resellers on Lapybazar.
-              </p>
+                ">
+              <img src="image/icons/im1.png" alt="Step 1" class="img-fluid"
+                style="max-width: 100%; max-height: 100%; object-fit: cover" />
             </div>
           </div>
-          <div class="row g-5 align-items-center mb-4 flex-md-row flex-column">
-            <div
-              class="col-md-6 order-md-2 d-flex justify-content-md-start justify-content-center"
-            >
-              <div
-                class="how-img-box"
-                style="
+          <div class="col-md-6 order-md-2 text-md-start text-center position-relative" style="z-index: 1">
+            <h5 class="fw-bold mb-2" style="color: #222">
+              Need a Second Hand Laptop? Start Your Search Now!
+            </h5>
+            <p class="mb-0 text-muted">
+              Searching for a reliable second-hand laptop near you? Get the
+              best deals from verified sellers and resellers on Lapybazar.
+            </p>
+          </div>
+        </div>
+        <div class="row g-5 align-items-center mb-4 flex-md-row flex-column">
+          <div class="col-md-6 order-md-2 d-flex justify-content-md-start justify-content-center">
+            <div class="how-img-box" style="
                   width: 220px;
                   height: 160px;
                   background: #eee;
@@ -1087,38 +925,26 @@
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                "
-              >
-                <!-- Image Placeholder 2 -->
-                <img
-                  src="image/icons/im2.png"
-                  alt="Step 2"
-                  class="img-fluid"
-                  style="max-width: 100%; max-height: 100%; object-fit: cover"
-                />
-              </div>
-            </div>
-            <div
-              class="col-md-6 order-md-1 text-md-end text-center position-relative"
-              style="z-index: 1"
-            >
-              <h5 class="fw-bold mb-2" style="color: #222">
-                Find the Perfect Second Hand Laptop on Lapybazar
-              </h5>
-              <p class="mb-0 text-muted">
-                Visit Lapybazar, explore a wide range of curated and refurbished
-                laptops, compare prices, and connect with trusted sellers – all
-                in one place!
-              </p>
+                ">
+              <!-- Image Placeholder 2 -->
+              <img src="image/icons/im2.png" alt="Step 2" class="img-fluid"
+                style="max-width: 100%; max-height: 100%; object-fit: cover" />
             </div>
           </div>
-          <div class="row g-5 align-items-center flex-md-row flex-column">
-            <div
-              class="col-md-6 order-md-1 d-flex justify-content-md-end justify-content-center"
-            >
-              <div
-                class="how-img-box"
-                style="
+          <div class="col-md-6 order-md-1 text-md-end text-center position-relative" style="z-index: 1">
+            <h5 class="fw-bold mb-2" style="color: #222">
+              Find the Perfect Second Hand Laptop on Lapybazar
+            </h5>
+            <p class="mb-0 text-muted">
+              Visit Lapybazar, explore a wide range of curated and refurbished
+              laptops, compare prices, and connect with trusted sellers – all
+              in one place!
+            </p>
+          </div>
+        </div>
+        <div class="row g-5 align-items-center flex-md-row flex-column">
+          <div class="col-md-6 order-md-1 d-flex justify-content-md-end justify-content-center">
+            <div class="how-img-box" style="
                   width: 220px;
                   height: 160px;
                   background: #eee;
@@ -1127,182 +953,108 @@
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                "
-              >
-                <!-- Image Placeholder 3 -->
-                <img
-                  src="image/icons/im3.png"
-                  alt="Step 3"
-                  class="img-fluid"
-                  style="max-width: 100%; max-height: 100%; object-fit: cover"
-                />
-              </div>
+                ">
+              <!-- Image Placeholder 3 -->
+              <img src="image/icons/im3.png" alt="Step 3" class="img-fluid"
+                style="max-width: 100%; max-height: 100%; object-fit: cover" />
             </div>
-            <div
-              class="col-md-6 order-md-2 text-md-start text-center position-relative"
-              style="z-index: 1"
-            >
-              <h5 class="fw-bold mb-2" style="color: #222">
-                Need a Second Hand Laptop? Start Your Search Now!
-              </h5>
-              <p class="mb-0 text-muted">
-                Searching for a reliable second-hand laptop near you? Get the
-                best deals from verified sellers and resellers on Lapybazar.
-              </p>
-            </div>
+          </div>
+          <div class="col-md-6 order-md-2 text-md-start text-center position-relative" style="z-index: 1">
+            <h5 class="fw-bold mb-2" style="color: #222">
+              Need a Second Hand Laptop? Start Your Search Now!
+            </h5>
+            <p class="mb-0 text-muted">
+              Searching for a reliable second-hand laptop near you? Get the
+              best deals from verified sellers and resellers on Lapybazar.
+            </p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Responsive Hero/Promo Section Start -->
-    <section
-      class="py-5"
-      style="background: linear-gradient(120deg, #fff6f6 0%, #ffeaea 100%)"
-    >
-      <div class="container" style="max-width: 1200px">
-        <div class="row align-items-center g-5 flex-column-reverse flex-md-row">
-          <!-- Left: Text Content -->
-          <div class="col-md-7 text-center text-md-start">
-            <h1
-              class="fw-bold mb-3"
-              style="color: #ff3b3b; font-size: 2.2rem; line-height: 1.2"
-            >
-              Lapy Bazar India's #1 Platform for
-              <br class="d-none d-md-block" />Second-Hand Laptops!
-            </h1>
-            <ul
-              class="list-unstyled mb-3"
-              style="font-size: 1.08rem; color: #222"
-            >
-              <li>
-                <b>Sell Your Old Laptop</b><br /><span
-                  style="font-weight: 400; color: #444"
-                  >• List your used laptop & find buyers nearby.</span
-                >
-              </li>
-              <li class="mt-2">
-                <b>Buy a Second-Hand Laptop</b><br /><span
-                  style="font-weight: 400; color: #444"
-                  >• Get the best deals from verified sellers near you.</span
-                >
-              </li>
-              <li class="mt-2">
-                <b>Resellers & Shopkeepers</b><br /><span
-                  style="font-weight: 400; color: #444"
-                  >• List unlimited laptops & get direct leads, with zero
-                  commission!</span
-                >
-              </li>
-              <li class="mt-2">
-                <b>Corporate Bulk Deals</b><br /><span
-                  style="font-weight: 400; color: #444"
-                  >• Buy or sell bulk laptops at the best market rates.</span
-                >
-              </li>
-            </ul>
-            <div
-              class="my-3"
-              style="
+    </div>
+  </section>
+  <!-- Responsive Hero/Promo Section Start -->
+  <section class="py-5" style="background: linear-gradient(120deg, #fff6f6 0%, #ffeaea 100%)">
+    <div class="container" style="max-width: 1200px">
+      <div class="row align-items-center g-5 flex-column-reverse flex-md-row">
+        <!-- Left: Text Content -->
+        <div class="col-md-7 text-center text-md-start">
+          <h1 class="fw-bold mb-3" style="color: #ff3b3b; font-size: 2.2rem; line-height: 1.2">
+            Lapy Bazar India's #1 Platform for
+            <br class="d-none d-md-block" />Second-Hand Laptops!
+          </h1>
+          <ul class="list-unstyled mb-3" style="font-size: 1.08rem; color: #222">
+            <li>
+              <b>Sell Your Old Laptop</b><br /><span style="font-weight: 400; color: #444">• List your used laptop &
+                find buyers nearby.</span>
+            </li>
+            <li class="mt-2">
+              <b>Buy a Second-Hand Laptop</b><br /><span style="font-weight: 400; color: #444">• Get the best deals from
+                verified sellers near you.</span>
+            </li>
+            <li class="mt-2">
+              <b>Resellers & Shopkeepers</b><br /><span style="font-weight: 400; color: #444">• List unlimited laptops &
+                get direct leads, with zero
+                commission!</span>
+            </li>
+            <li class="mt-2">
+              <b>Corporate Bulk Deals</b><br /><span style="font-weight: 400; color: #444">• Buy or sell bulk laptops at
+                the best market rates.</span>
+            </li>
+          </ul>
+          <div class="my-3" style="
                 width: 60px;
                 height: 3px;
                 background-color: #ff3b3b;
                 margin-left: 0;
-              "
-            ></div>
-            <div
-              class="mb-3"
-              style="font-weight: 600; color: #222; font-size: 1.1rem"
-            >
-              • Local Deals | No Middleman | 100% Free Listing<br />
-              • Join LapyBazar & Make Smart Laptop Deals Today!
-            </div>
-            <a
-              href="#how-it-works"
-              class="btn btn-danger px-4 py-2 fw-bold"
-              style="border-radius: 8px; font-size: 1.1rem"
-              >How It Works</a
-            >
+              "></div>
+          <div class="mb-3" style="font-weight: 600; color: #222; font-size: 1.1rem">
+            • Local Deals | No Middleman | 100% Free Listing<br />
+            • Join LapyBazar & Make Smart Laptop Deals Today!
           </div>
-          <!-- Right: Laptop Image with Abstract BG -->
-          <div
-            class="col-md-5 d-flex justify-content-center align-items-center position-relative"
-            style="min-height: 260px"
-          >
-            <div
-              style="
+          <a href="#how-it-works" class="btn btn-danger px-4 py-2 fw-bold"
+            style="border-radius: 8px; font-size: 1.1rem">How It Works</a>
+        </div>
+        <!-- Right: Laptop Image with Abstract BG -->
+        <div class="col-md-5 d-flex justify-content-center align-items-center position-relative"
+          style="min-height: 260px">
+          <div style="
                 position: absolute;
                 top: 10%;
                 left: 0;
                 width: 100%;
                 height: 80%;
                 z-index: 0;
-              "
-            >
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 400 300"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                style="position: absolute; left: 0; top: 0"
-              >
-                <ellipse
-                  cx="320"
-                  cy="80"
-                  rx="80"
-                  ry="60"
-                  fill="#ffb3b3"
-                  fill-opacity="0.5"
-                />
-                <ellipse
-                  cx="120"
-                  cy="220"
-                  rx="100"
-                  ry="60"
-                  fill="#ff3b3b"
-                  fill-opacity="0.18"
-                />
-                <ellipse
-                  cx="200"
-                  cy="150"
-                  rx="120"
-                  ry="90"
-                  fill="#ff6b6b"
-                  fill-opacity="0.13"
-                />
-              </svg>
-            </div>
-            <img
-              src="image/icons/3rdimg.png"
-              alt="LapyBazar Laptop"
-              class="img-fluid"
-              style="max-width: 340px; z-index: 1; position: relative"
-            />
+              ">
+            <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg"
+              style="position: absolute; left: 0; top: 0">
+              <ellipse cx="320" cy="80" rx="80" ry="60" fill="#ffb3b3" fill-opacity="0.5" />
+              <ellipse cx="120" cy="220" rx="100" ry="60" fill="#ff3b3b" fill-opacity="0.18" />
+              <ellipse cx="200" cy="150" rx="120" ry="90" fill="#ff6b6b" fill-opacity="0.13" />
+            </svg>
           </div>
+          <img src="image/icons/3rdimg.png" alt="LapyBazar Laptop" class="img-fluid"
+            style="max-width: 340px; z-index: 1; position: relative" />
         </div>
       </div>
-    </section>
-    <!-- Responsive Hero/Promo Section End -->
+    </div>
+  </section>
+  <!-- Responsive Hero/Promo Section End -->
 
-    <!-- FAQ Section Start -->
-    <section class="py-5" style="background: #fff">
-      <div class="container" style="max-width: 1200px">
-        <div class="text-center mb-4">
-          <h2 class="fw-bold mb-1" style="color: #222">FAQ's</h2>
-          <div class="mb-2" style="color: #888; font-size: 1.08rem">
-            Checkout Latest News And Articles From Our Blog
-          </div>
-          <div
-            class="mx-auto mb-3"
-            style="
+  <!-- FAQ Section Start -->
+  <section class="py-5" style="background: #fff">
+    <div class="container" style="max-width: 1200px">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold mb-1" style="color: #222">FAQ's</h2>
+        <div class="mb-2" style="color: #888; font-size: 1.08rem">
+          Checkout Latest News And Articles From Our Blog
+        </div>
+        <div class="mx-auto mb-3" style="
               width: 80px;
               height: 3px;
               background: linear-gradient(90deg, #ff3b3b 60%, #fff6f6 100%);
               position: relative;
-            "
-          >
-            <span
-              style="
+            ">
+          <span style="
                 position: absolute;
                 left: 0;
                 top: -7px;
@@ -1310,10 +1062,8 @@
                 height: 3px;
                 background: #ff3b3b;
                 border-radius: 2px;
-              "
-            ></span>
-            <span
-              style="
+              "></span>
+          <span style="
                 position: absolute;
                 right: 0;
                 top: -7px;
@@ -1321,390 +1071,246 @@
                 height: 3px;
                 background: #ff3b3b;
                 border-radius: 2px;
-              "
-            ></span>
-          </div>
+              "></span>
         </div>
-        <div class="row g-4">
-          <!-- Buyers FAQ -->
-          <div class="col-12 col-md-6">
-            <div
-              class="fw-bold mb-3"
-              style="
+      </div>
+      <div class="row g-4">
+        <!-- Buyers FAQ -->
+        <div class="col-12 col-md-6">
+          <div class="fw-bold mb-3" style="
                 font-size: 1.15rem;
                 color: #222;
                 border-left: 3px solid #ff3b3b;
                 padding-left: 10px;
-              "
-            >
-              Frequently Asked Questions for Buyers
+              ">
+            Frequently Asked Questions for Buyers
+          </div>
+          <div class="accordion" id="faqBuyers">
+            <div class="accordion-item" style="border: none; background: transparent">
+              <h2 class="accordion-header" id="faq-buyer-q1">
+                <button class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-buyer-a1" aria-expanded="false"
+                  aria-controls="faq-buyer-a1" style="
+                      background: #fafafa;
+                      border-radius: 8px;
+                      border: 1px solid #eee;
+                      color: #222;
+                    ">
+                  <span>For consumers, how does Lapybazar work?</span>
+                  <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
+                </button>
+              </h2>
+              <div id="faq-buyer-a1" class="accordion-collapse collapse" aria-labelledby="faq-buyer-q1"
+                data-bs-parent="#faqBuyers">
+                <div class="accordion-body px-3 py-2" style="background: #fff6f6; border-radius: 8px">
+                  Lapybazar connects buyers and sellers of used laptops.
+                  Browse listings, contact sellers, and make deals directly
+                  with no middleman.
+                </div>
+              </div>
             </div>
-            <div class="accordion" id="faqBuyers">
-              <div
-                class="accordion-item"
-                style="border: none; background: transparent"
-              >
-                <h2 class="accordion-header" id="faq-buyer-q1">
-                  <button
-                    class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-buyer-a1"
-                    aria-expanded="false"
-                    aria-controls="faq-buyer-a1"
-                    style="
+            <div class="accordion-item" style="border: none; background: transparent">
+              <h2 class="accordion-header" id="faq-buyer-q2">
+                <button class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-buyer-a2" aria-expanded="false"
+                  aria-controls="faq-buyer-a2" style="
                       background: #fafafa;
                       border-radius: 8px;
                       border: 1px solid #eee;
                       color: #222;
-                    "
-                  >
-                    <span>For consumers, how does Lapybazar work?</span>
-                    <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
-                  </button>
-                </h2>
-                <div
-                  id="faq-buyer-a1"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="faq-buyer-q1"
-                  data-bs-parent="#faqBuyers"
-                >
-                  <div
-                    class="accordion-body px-3 py-2"
-                    style="background: #fff6f6; border-radius: 8px"
-                  >
-                    Lapybazar connects buyers and sellers of used laptops.
-                    Browse listings, contact sellers, and make deals directly
-                    with no middleman.
-                  </div>
+                    ">
+                  <span>Where can I locate the finest used laptop deals?</span>
+                  <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
+                </button>
+              </h2>
+              <div id="faq-buyer-a2" class="accordion-collapse collapse" aria-labelledby="faq-buyer-q2"
+                data-bs-parent="#faqBuyers">
+                <div class="accordion-body px-3 py-2" style="background: #fff6f6; border-radius: 8px">
+                  Use the search and filter options to find the best deals
+                  from trusted sellers in your city or nearby locations.
                 </div>
               </div>
-              <div
-                class="accordion-item"
-                style="border: none; background: transparent"
-              >
-                <h2 class="accordion-header" id="faq-buyer-q2">
-                  <button
-                    class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-buyer-a2"
-                    aria-expanded="false"
-                    aria-controls="faq-buyer-a2"
-                    style="
+            </div>
+            <div class="accordion-item" style="border: none; background: transparent">
+              <h2 class="accordion-header" id="faq-buyer-q3">
+                <button class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-buyer-a3" aria-expanded="false"
+                  aria-controls="faq-buyer-a3" style="
                       background: #fafafa;
                       border-radius: 8px;
                       border: 1px solid #eee;
                       color: #222;
-                    "
-                  >
-                    <span
-                      >Where can I locate the finest used laptop deals?</span
-                    >
-                    <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
-                  </button>
-                </h2>
-                <div
-                  id="faq-buyer-a2"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="faq-buyer-q2"
-                  data-bs-parent="#faqBuyers"
-                >
-                  <div
-                    class="accordion-body px-3 py-2"
-                    style="background: #fff6f6; border-radius: 8px"
-                  >
-                    Use the search and filter options to find the best deals
-                    from trusted sellers in your city or nearby locations.
-                  </div>
+                    ">
+                  <span>Which payment systems ought I to use?</span>
+                  <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
+                </button>
+              </h2>
+              <div id="faq-buyer-a3" class="accordion-collapse collapse" aria-labelledby="faq-buyer-q3"
+                data-bs-parent="#faqBuyers">
+                <div class="accordion-body px-3 py-2" style="background: #fff6f6; border-radius: 8px">
+                  Always use secure and traceable payment methods such as UPI,
+                  bank transfer, or cash on delivery. Avoid sending money in
+                  advance to unknown sellers.
                 </div>
               </div>
-              <div
-                class="accordion-item"
-                style="border: none; background: transparent"
-              >
-                <h2 class="accordion-header" id="faq-buyer-q3">
-                  <button
-                    class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-buyer-a3"
-                    aria-expanded="false"
-                    aria-controls="faq-buyer-a3"
-                    style="
+            </div>
+            <div class="accordion-item" style="border: none; background: transparent">
+              <h2 class="accordion-header" id="faq-buyer-q4">
+                <button class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-buyer-a4" aria-expanded="false"
+                  aria-controls="faq-buyer-a4" style="
                       background: #fafafa;
                       border-radius: 8px;
                       border: 1px solid #eee;
                       color: #222;
-                    "
-                  >
-                    <span>Which payment systems ought I to use?</span>
-                    <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
-                  </button>
-                </h2>
-                <div
-                  id="faq-buyer-a3"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="faq-buyer-q3"
-                  data-bs-parent="#faqBuyers"
-                >
-                  <div
-                    class="accordion-body px-3 py-2"
-                    style="background: #fff6f6; border-radius: 8px"
-                  >
-                    Always use secure and traceable payment methods such as UPI,
-                    bank transfer, or cash on delivery. Avoid sending money in
-                    advance to unknown sellers.
-                  </div>
-                </div>
-              </div>
-              <div
-                class="accordion-item"
-                style="border: none; background: transparent"
-              >
-                <h2 class="accordion-header" id="faq-buyer-q4">
-                  <button
-                    class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-buyer-a4"
-                    aria-expanded="false"
-                    aria-controls="faq-buyer-a4"
-                    style="
-                      background: #fafafa;
-                      border-radius: 8px;
-                      border: 1px solid #eee;
-                      color: #222;
-                    "
-                  >
-                    <span>Lapybazar provides buyer protection or returns?</span>
-                    <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
-                  </button>
-                </h2>
-                <div
-                  id="faq-buyer-a4"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="faq-buyer-q4"
-                  data-bs-parent="#faqBuyers"
-                >
-                  <div
-                    class="accordion-body px-3 py-2"
-                    style="
+                    ">
+                  <span>Lapybazar provides buyer protection or returns?</span>
+                  <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
+                </button>
+              </h2>
+              <div id="faq-buyer-a4" class="accordion-collapse collapse" aria-labelledby="faq-buyer-q4"
+                data-bs-parent="#faqBuyers">
+                <div class="accordion-body px-3 py-2" style="
                       background: #fff6f6;
                       border-radius: 8px;
                       color: #ff3b3b;
-                    "
-                  >
-                    No, Lapybazar manages neither refunds, returns, nor
-                    payments. Every contract exists directly between the vendor
-                    and the buyer.
-                  </div>
+                    ">
+                  No, Lapybazar manages neither refunds, returns, nor
+                  payments. Every contract exists directly between the vendor
+                  and the buyer.
                 </div>
               </div>
-              <div
-                class="mt-2 px-3 py-2 rounded"
-                style="background: #ffeaea; color: #ff3b3b; font-size: 0.97rem"
-              >
-                Note. Lapybazar manages neither refunds, returns, nor payments.
-                Every contract exists directly between the vendor and the buyer.
-              </div>
+            </div>
+            <div class="mt-2 px-3 py-2 rounded" style="background: #ffeaea; color: #ff3b3b; font-size: 0.97rem">
+              Note. Lapybazar manages neither refunds, returns, nor payments.
+              Every contract exists directly between the vendor and the buyer.
             </div>
           </div>
-          <!-- Sellers FAQ -->
-          <div class="col-12 col-md-6">
-            <div
-              class="fw-bold mb-3"
-              style="
+        </div>
+        <!-- Sellers FAQ -->
+        <div class="col-12 col-md-6">
+          <div class="fw-bold mb-3" style="
                 font-size: 1.15rem;
                 color: #222;
                 border-left: 3px solid #ff3b3b;
                 padding-left: 10px;
-              "
-            >
-              Frequently Asked Questions for Seller
+              ">
+            Frequently Asked Questions for Seller
+          </div>
+          <div class="accordion" id="faqSellers">
+            <div class="accordion-item" style="border: none; background: transparent">
+              <h2 class="accordion-header" id="faq-seller-q1">
+                <button class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-seller-a1" aria-expanded="false"
+                  aria-controls="faq-seller-a1" style="
+                      background: #fafafa;
+                      border-radius: 8px;
+                      border: 1px solid #eee;
+                      color: #222;
+                    ">
+                  <span>How can I sell my laptop on Lapybazar?</span>
+                  <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
+                </button>
+              </h2>
+              <div id="faq-seller-a1" class="accordion-collapse collapse" aria-labelledby="faq-seller-q1"
+                data-bs-parent="#faqSellers">
+                <div class="accordion-body px-3 py-2" style="background: #fff6f6; border-radius: 8px">
+                  Register as a seller, list your laptop with details and
+                  images, and connect with buyers directly through the
+                  platform.
+                </div>
+              </div>
             </div>
-            <div class="accordion" id="faqSellers">
-              <div
-                class="accordion-item"
-                style="border: none; background: transparent"
-              >
-                <h2 class="accordion-header" id="faq-seller-q1">
-                  <button
-                    class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-seller-a1"
-                    aria-expanded="false"
-                    aria-controls="faq-seller-a1"
-                    style="
+            <div class="accordion-item" style="border: none; background: transparent">
+              <h2 class="accordion-header" id="faq-seller-q2">
+                <button class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-seller-a2" aria-expanded="false"
+                  aria-controls="faq-seller-a2" style="
                       background: #fafafa;
                       border-radius: 8px;
                       border: 1px solid #eee;
                       color: #222;
-                    "
-                  >
-                    <span>How can I sell my laptop on Lapybazar?</span>
-                    <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
-                  </button>
-                </h2>
-                <div
-                  id="faq-seller-a1"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="faq-seller-q1"
-                  data-bs-parent="#faqSellers"
-                >
-                  <div
-                    class="accordion-body px-3 py-2"
-                    style="background: #fff6f6; border-radius: 8px"
-                  >
-                    Register as a seller, list your laptop with details and
-                    images, and connect with buyers directly through the
-                    platform.
-                  </div>
+                    ">
+                  <span>Exists a commission or listing fee?</span>
+                  <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
+                </button>
+              </h2>
+              <div id="faq-seller-a2" class="accordion-collapse collapse" aria-labelledby="faq-seller-q2"
+                data-bs-parent="#faqSellers">
+                <div class="accordion-body px-3 py-2" style="background: #fff6f6; border-radius: 8px">
+                  No, listing your laptop on Lapybazar is 100% free. There are
+                  no commissions or platform fees for sellers.
                 </div>
               </div>
-              <div
-                class="accordion-item"
-                style="border: none; background: transparent"
-              >
-                <h2 class="accordion-header" id="faq-seller-q2">
-                  <button
-                    class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-seller-a2"
-                    aria-expanded="false"
-                    aria-controls="faq-seller-a2"
-                    style="
+            </div>
+            <div class="accordion-item" style="border: none; background: transparent">
+              <h2 class="accordion-header" id="faq-seller-q3">
+                <button class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-seller-a3" aria-expanded="false"
+                  aria-controls="faq-seller-a3" style="
                       background: #fafafa;
                       border-radius: 8px;
                       border: 1px solid #eee;
                       color: #222;
-                    "
-                  >
-                    <span>Exists a commission or listing fee?</span>
-                    <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
-                  </button>
-                </h2>
-                <div
-                  id="faq-seller-a2"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="faq-seller-q2"
-                  data-bs-parent="#faqSellers"
-                >
-                  <div
-                    class="accordion-body px-3 py-2"
-                    style="background: #fff6f6; border-radius: 8px"
-                  >
-                    No, listing your laptop on Lapybazar is 100% free. There are
-                    no commissions or platform fees for sellers.
-                  </div>
+                    ">
+                  <span>How may I sell my laptop more quickly?</span>
+                  <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
+                </button>
+              </h2>
+              <div id="faq-seller-a3" class="accordion-collapse collapse" aria-labelledby="faq-seller-q3"
+                data-bs-parent="#faqSellers">
+                <div class="accordion-body px-3 py-2" style="background: #fff6f6; border-radius: 8px">
+                  Add clear photos, detailed descriptions, and competitive
+                  pricing. Respond quickly to buyer inquiries for faster
+                  sales.
                 </div>
               </div>
-              <div
-                class="accordion-item"
-                style="border: none; background: transparent"
-              >
-                <h2 class="accordion-header" id="faq-seller-q3">
-                  <button
-                    class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-seller-a3"
-                    aria-expanded="false"
-                    aria-controls="faq-seller-a3"
-                    style="
+            </div>
+            <div class="accordion-item" style="border: none; background: transparent">
+              <h2 class="accordion-header" id="faq-seller-q4">
+                <button class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-seller-a4" aria-expanded="false"
+                  aria-controls="faq-seller-a4" style="
                       background: #fafafa;
                       border-radius: 8px;
                       border: 1px solid #eee;
                       color: #222;
-                    "
-                  >
-                    <span>How may I sell my laptop more quickly?</span>
-                    <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
-                  </button>
-                </h2>
-                <div
-                  id="faq-seller-a3"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="faq-seller-q3"
-                  data-bs-parent="#faqSellers"
-                >
-                  <div
-                    class="accordion-body px-3 py-2"
-                    style="background: #fff6f6; border-radius: 8px"
-                  >
-                    Add clear photos, detailed descriptions, and competitive
-                    pricing. Respond quickly to buyer inquiries for faster
-                    sales.
-                  </div>
-                </div>
-              </div>
-              <div
-                class="accordion-item"
-                style="border: none; background: transparent"
-              >
-                <h2 class="accordion-header" id="faq-seller-q4">
-                  <button
-                    class="accordion-button collapsed px-3 py-2 d-flex justify-content-between align-items-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-seller-a4"
-                    aria-expanded="false"
-                    aria-controls="faq-seller-a4"
-                    style="
-                      background: #fafafa;
-                      border-radius: 8px;
-                      border: 1px solid #eee;
-                      color: #222;
-                    "
-                  >
-                    <span>How can I stay away from sales frauds?</span>
-                    <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
-                  </button>
-                </h2>
-                <div
-                  id="faq-seller-a4"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="faq-seller-q4"
-                  data-bs-parent="#faqSellers"
-                >
-                  <div
-                    class="accordion-body px-3 py-2"
-                    style="background: #fff6f6; border-radius: 8px"
-                  >
-                    Always verify buyer details, use secure payment methods, and
-                    avoid sharing sensitive information. Meet in safe, public
-                    places for transactions.
-                  </div>
+                    ">
+                  <span>How can I stay away from sales frauds?</span>
+                  <span class="faq-toggle-icon text-danger fs-4 ms-2">+</span>
+                </button>
+              </h2>
+              <div id="faq-seller-a4" class="accordion-collapse collapse" aria-labelledby="faq-seller-q4"
+                data-bs-parent="#faqSellers">
+                <div class="accordion-body px-3 py-2" style="background: #fff6f6; border-radius: 8px">
+                  Always verify buyer details, use secure payment methods, and
+                  avoid sharing sensitive information. Meet in safe, public
+                  places for transactions.
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- FAQ Section End -->
+    </div>
+  </section>
+  <!-- FAQ Section End -->
 
-    <!-- News & Tips Section Start -->
-    <section class="py-5" style="background: #fff">
-      <div class="container" style="max-width: 1200px">
-        <div class="text-center mb-4">
-          <h2 class="fw-bold mb-1" style="color: #222">News & Tips</h2>
-          <div class="mb-2" style="color: #888; font-size: 1.08rem">
-            Checkout Latest News And Articles From Our Blog
-          </div>
-          <div
-            class="mx-auto mb-3"
-            style="
+  <!-- News & Tips Section Start -->
+  <section class="py-5" style="background: #fff ">
+    <div class="container" style="max-width: 1200px">
+      <div class="text-center mb-80">
+        <h2 class="fw-bold mb-1" style="color: #222">News & Tips</h2>
+        <div class="mb-2" style="color: #888; font-size: 1.08rem">
+          Checkout Latest News And Articles From Our Blog
+        </div>
+        <div class="mx-auto mb-3" style="
               width: 80px;
               height: 3px;
               background: linear-gradient(90deg, #ff3b3b 60%, #fff6f6 100%);
               position: relative;
-            "
-          >
-            <span
-              style="
+            ">
+          <span style="
                 position: absolute;
                 left: 0;
                 top: -7px;
@@ -1712,10 +1318,8 @@
                 height: 3px;
                 background: #ff3b3b;
                 border-radius: 2px;
-              "
-            ></span>
-            <span
-              style="
+              "></span>
+          <span style="
                 position: absolute;
                 right: 0;
                 top: -7px;
@@ -1723,19 +1327,43 @@
                 height: 3px;
                 background: #ff3b3b;
                 border-radius: 2px;
-              "
-            ></span>
+              "></span>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center " style="margin-bottom:120px">
+        <!-- Blog Card 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+          <div class="card shadow-sm border-0 w-100 h-100" style="border-radius: 12px">
+            <div style="
+                  height: 160px;
+                  background: #f5f5f5;
+                  border-radius: 12px 12px 0 0;
+                  overflow: hidden;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                ">
+              <img src="/image/blog1.png" alt="Blog 1" style="width: 100%; height: 100%; object-fit: cover" />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between" style="min-height: 180px">
+              <div class="d-flex align-items-center mb-2" style="font-size: 13px; color: #888">
+                <span class="me-2"><i class="fa fa-calendar-alt me-1"></i> March 21,
+                  2025</span>
+                <span><i class="fa fa-user-circle me-1"></i> Anupam Mehra</span>
+              </div>
+              <div class="fw-semibold mb-2" style="font-size: 1rem; color: #222">
+                Choosing the Right Intel Laptop Processor: A Comprehensive
+                Guide
+              </div>
+              <a href="#" class="btn btn-danger btn-sm mt-auto" style="border-radius: 6px; font-size: 0.98rem">Read
+                More</a>
+            </div>
           </div>
         </div>
-        <div class="row g-4 justify-content-center">
-          <!-- Blog Card 1 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-            <div
-              class="card shadow-sm border-0 w-100 h-100"
-              style="border-radius: 12px"
-            >
-              <div
-                style="
+        <!-- Blog Card 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+          <div class="card shadow-sm border-0 w-100 h-100" style="border-radius: 12px">
+            <div style="
                   height: 160px;
                   background: #f5f5f5;
                   border-radius: 12px 12px 0 0;
@@ -1743,54 +1371,27 @@
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                "
-              >
-                <img
-                  src="/image/blog1.png"
-                  alt="Blog 1"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
+                ">
+              <img src="/image/blog2.png" alt="Blog 2" style="width: 100%; height: 100%; object-fit: cover" />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between" style="min-height: 180px">
+              <div class="d-flex align-items-center mb-2" style="font-size: 13px; color: #888">
+                <span class="me-2"><i class="fa fa-calendar-alt me-1"></i> March 21,
+                  2025</span>
+                <span><i class="fa fa-user-circle me-1"></i> Anupam Mehra</span>
               </div>
-              <div
-                class="card-body d-flex flex-column justify-content-between"
-                style="min-height: 180px"
-              >
-                <div
-                  class="d-flex align-items-center mb-2"
-                  style="font-size: 13px; color: #888"
-                >
-                  <span class="me-2"
-                    ><i class="fa fa-calendar-alt me-1"></i> March 21,
-                    2025</span
-                  >
-                  <span
-                    ><i class="fa fa-user-circle me-1"></i> Anupam Mehra</span
-                  >
-                </div>
-                <div
-                  class="fw-semibold mb-2"
-                  style="font-size: 1rem; color: #222"
-                >
-                  Choosing the Right Intel Laptop Processor: A Comprehensive
-                  Guide
-                </div>
-                <a
-                  href="#"
-                  class="btn btn-danger btn-sm mt-auto"
-                  style="border-radius: 6px; font-size: 0.98rem"
-                  >Read More</a
-                >
+              <div class="fw-semibold mb-2" style="font-size: 1rem; color: #222">
+                How COVID-19 Changed the Indian Laptop Market
               </div>
+              <a href="#" class="btn btn-danger btn-sm mt-auto" style="border-radius: 6px; font-size: 0.98rem">Read
+                More</a>
             </div>
           </div>
-          <!-- Blog Card 2 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-            <div
-              class="card shadow-sm border-0 w-100 h-100"
-              style="border-radius: 12px"
-            >
-              <div
-                style="
+        </div>
+        <!-- Blog Card 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+          <div class="card shadow-sm border-0 w-100 h-100" style="border-radius: 12px">
+            <div style="
                   height: 160px;
                   background: #f5f5f5;
                   border-radius: 12px 12px 0 0;
@@ -1798,53 +1399,27 @@
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                "
-              >
-                <img
-                  src="/image/blog2.png"
-                  alt="Blog 2"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
+                ">
+              <img src="/image/blog3.png" alt="Blog 3" style="width: 100%; height: 100%; object-fit: cover" />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between" style="min-height: 180px">
+              <div class="d-flex align-items-center mb-2" style="font-size: 13px; color: #888">
+                <span class="me-2"><i class="fa fa-calendar-alt me-1"></i> March 21,
+                  2025</span>
+                <span><i class="fa fa-user-circle me-1"></i> Anupam Mehra</span>
               </div>
-              <div
-                class="card-body d-flex flex-column justify-content-between"
-                style="min-height: 180px"
-              >
-                <div
-                  class="d-flex align-items-center mb-2"
-                  style="font-size: 13px; color: #888"
-                >
-                  <span class="me-2"
-                    ><i class="fa fa-calendar-alt me-1"></i> March 21,
-                    2025</span
-                  >
-                  <span
-                    ><i class="fa fa-user-circle me-1"></i> Anupam Mehra</span
-                  >
-                </div>
-                <div
-                  class="fw-semibold mb-2"
-                  style="font-size: 1rem; color: #222"
-                >
-                  How COVID-19 Changed the Indian Laptop Market
-                </div>
-                <a
-                  href="#"
-                  class="btn btn-danger btn-sm mt-auto"
-                  style="border-radius: 6px; font-size: 0.98rem"
-                  >Read More</a
-                >
+              <div class="fw-semibold mb-2" style="font-size: 1rem; color: #222">
+                Navigating India's Market Landscape: Why Refurbished ...
               </div>
+              <a href="#" class="btn btn-danger btn-sm mt-auto" style="border-radius: 6px; font-size: 0.98rem">Read
+                More</a>
             </div>
           </div>
-          <!-- Blog Card 3 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-            <div
-              class="card shadow-sm border-0 w-100 h-100"
-              style="border-radius: 12px"
-            >
-              <div
-                style="
+        </div>
+        <!-- Blog Card 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+          <div class="card shadow-sm border-0 w-100 h-100" style="border-radius: 12px">
+            <div style="
                   height: 160px;
                   background: #f5f5f5;
                   border-radius: 12px 12px 0 0;
@@ -1852,103 +1427,41 @@
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                "
-              >
-                <img
-                  src="/image/blog3.png"
-                  alt="Blog 3"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
-              </div>
-              <div
-                class="card-body d-flex flex-column justify-content-between"
-                style="min-height: 180px"
-              >
-                <div
-                  class="d-flex align-items-center mb-2"
-                  style="font-size: 13px; color: #888"
-                >
-                  <span class="me-2"
-                    ><i class="fa fa-calendar-alt me-1"></i> March 21,
-                    2025</span
-                  >
-                  <span
-                    ><i class="fa fa-user-circle me-1"></i> Anupam Mehra</span
-                  >
-                </div>
-                <div
-                  class="fw-semibold mb-2"
-                  style="font-size: 1rem; color: #222"
-                >
-                  Navigating India's Market Landscape: Why Refurbished ...
-                </div>
-                <a
-                  href="#"
-                  class="btn btn-danger btn-sm mt-auto"
-                  style="border-radius: 6px; font-size: 0.98rem"
-                  >Read More</a
-                >
-              </div>
+                ">
+              <img src="/image/blog4.png" alt="Blog 4" style="width: 100%; height: 100%; object-fit: cover" />
             </div>
-          </div>
-          <!-- Blog Card 4 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-            <div
-              class="card shadow-sm border-0 w-100 h-100"
-              style="border-radius: 12px"
-            >
-              <div
-                style="
-                  height: 160px;
-                  background: #f5f5f5;
-                  border-radius: 12px 12px 0 0;
-                  overflow: hidden;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <img
-                  src="/image/blog4.png"
-                  alt="Blog 4"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
+            <div class="card-body d-flex flex-column justify-content-between" style="min-height: 180px">
+              <div class="d-flex align-items-center mb-2" style="font-size: 13px; color: #888">
+                <span class="me-2"><i class="fa fa-calendar-alt me-1"></i> March 21,
+                  2025</span>
+                <span><i class="fa fa-user-circle me-1"></i> Anupam Mehra</span>
               </div>
-              <div
-                class="card-body d-flex flex-column justify-content-between"
-                style="min-height: 180px"
-              >
-                <div
-                  class="d-flex align-items-center mb-2"
-                  style="font-size: 13px; color: #888"
-                >
-                  <span class="me-2"
-                    ><i class="fa fa-calendar-alt me-1"></i> March 21,
-                    2025</span
-                  >
-                  <span
-                    ><i class="fa fa-user-circle me-1"></i> Anupam Mehra</span
-                  >
-                </div>
-                <div
-                  class="fw-semibold mb-2"
-                  style="font-size: 1rem; color: #222"
-                >
-                  Choosing the Right Intel Laptop Processor: A Comprehensive
-                  Guide
-                </div>
-                <a
-                  href="#"
-                  class="btn btn-danger btn-sm mt-auto"
-                  style="border-radius: 6px; font-size: 0.98rem"
-                  >Read More</a
-                >
+              <div class="fw-semibold mb-2" style="font-size: 1rem; color: #222">
+                Choosing the Right Intel Laptop Processor: A Comprehensive
+                Guide
               </div>
+              <a href="#" class="btn btn-danger btn-sm mt-auto" style="border-radius: 6px; font-size: 0.98rem">Read
+                More</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+<div class="relative-container">
+ 
+  <div class="red-card">
+    <div class="text-content">
+      <h3>Submit Your Listing Today!</h3>
+      <p>Explore some of the best tips from around the city from our partners and friends.</p>
+    </div>
+    <button class="submit-btn">Submit Now</button>
+  </div>
+</div>
+
+
+
 
     <footer>
       <div class="footer-wrapper">
@@ -2026,4 +1539,6 @@
     </script>
 
   </body>
+</html>
+
 </html>
