@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ["Poppins", "sans-serif"], // Note capital 'P'
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .custom_container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0px 20px;
+
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-poppins">
+    <section>
+        <nav>
+            <!-- Navbar (Header) -->
+            <header id="mainHeader"
+                class="flex justify-between lg:items-center items-start  px-6 py-4 shadow-md bg-[#000] relative">
+                <!-- Left Section -->
+                <div class=" flex gap-4 justify-center items-center ">
+                    <!-- Logo -->
+                    <div class="w-44">
+                        <img src="./image/mainlogo.png" alt="Logo" class="w-full" />
+                    </div>
+
+                    <!-- Location Button -->
+                    <div class="bg-[#FF3131] border-none rounded-xl">
+                        <button class="lg:flex items-center gap-2  rounded px-5 py-1 hidden">
+                            <img src="./image/current-Icons.png" alt="Location Icon" class="w-6 h-6" />
+                            <div class="bg-[#FF3131]">
+                                <p class="text-sm font-medium text-[#fff]">Click Here to Find Nearby Listings</p>
+                                <p class="text-xs text-[#fff]">Fetching Location</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="hidden lg:flex items-center gap-6 ml-[450px]">
+                    <div class="flex gap-4 text-md font-medium text-[#fff]">
+                        <a href="#" class="">Brand</a>
+                        <a href="#" class="">Reseller</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button
+                            class="flex gap-2 justify-center items-baseline  px-4 py-2 rounded bg-[#FFC862] text-[#000]">
+                            <i class="fa-regular fa-user w-5 h-5"></i>
+                            <p class="text-md font-medium ">Login/Sign Up</p>
+                        </button>
+                        <button
+                            class="bg-[#FF3131] text-white text-md font-medium  px-4 py-2 rounded flex justify-center items-center gap-2">
+                            <i class="fa-solid fa-plus"></i> Add Listing
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hamburger Icon (Mobile) -->
+                <button id="bar" class="flex justify-center items-center w-10 h-10 rounded-full">
+                    <i class="fa-solid fa-bars text-xl text-white bg-[#FF3131]  md:hidden"></i>
+                </button>
+
+            </header>
+
+            <!-- Mobile Header -->
+            <div id="sideMenu"
+                class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col gap-4 p-6">
+
+                <div class="flex justify-between items-center">
+
+                    <button id="xmark">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+
+                <nav class="flex flex-col gap-4 mt-4 text-lg">
+                    <a href="#" class="hover:text-blue-600">Brand</a>
+                    <a href="#" class="hover:text-blue-600">Reseller</a>
+                </nav>
+
+                <div class="mt-4 flex flex-col gap-3">
+                    <button class="flex items-center gap-2    py-1 ">
+                        <!-- <img src="/lappybazar/image/current-Icons.png" alt="Location Icon" class="w-6 h-6" /> -->
+                        <div class="bg-[#FF3131] rounded-lg px-2">
+                            <p class="text-xs font-medium text-[#fff]">Click Here to Find Nearby Listings</p>
+                            <p class="text-xs text-[#fff]">Fetching Location</p>
+                        </div>
+                    </button>
+                    <button
+                        class="flex gap-2 justify-center items-baseline  px-4 py-2 rounded bg-[#FFC862] text-[#000]">
+                        <i class="fa-regular fa-user w-5 h-5"></i>
+                        <p class="text-md font-medium ">Login/Sign Up</p>
+                    </button>
+                    <button
+                        class="bg-[#FF3131] text-white text-md font-medium  px-4 py-2 rounded flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-plus"></i> Add Listing
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+    </section>
+
+    <section class="main-content bg-cover bg-center min-h-screen flex items-center justify-center"
+        style="background-image: url('./image/map.png');">
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 p-4 max-w-7xl mx-auto">
+            <!-- What Input -->
+            <div class="flex items-center rounded-lg overflow-hidden shadow w-full md:w-auto border border-[#A7A7A7]">
+                <span
+                    class="px-6 lg:py-4 py-2  font-medium bg-gray-100 border-r border-gray-300 min-w-[120px] text-center lg:text-md text-sm">
+                    What
+                </span>
+                <input type="text" placeholder="Ex: Laptop Search..."
+                    class="px-6 lg:py-4 py-2 w-full md:w-[400px] focus:outline-none" />
+            </div>
+
+            <!-- Location Input -->
+            <div class="flex flex-row  gap-2">
+                <div
+                    class="flex items-center rounded-lg overflow-hidden shadow w-full md:w-auto border border-[#A7A7A7]">
+                    <span
+                        class="px-6 lg:py-4 py-2 flex items-center gap-2 bg-gray-100 border-r border-gray-300  font-medium min-w-[120px] lg:text-md text-sm">
+                        <i class="fa-solid fa-location-dot text-[#FF3131]"></i>
+                        Location
+                    </span>
+                    <input type="text" placeholder="Location"
+                        class="px-6 lg:py-4 py-2 w-full md:w-[400px] focus:outline-none" />
+                </div>
+
+                <!-- Search Button -->
+                <button
+                    class="bg-[#FF3131] hover:bg-red-700 lg:w-14 lg:h-14 w-10 h-10 rounded-lg shadow text-white flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="w-full px-4 py-10 bg-white flex flex-col lg:flex-row gap-6 custom_container">
+        <!-- Left Filter Sidebar -->
+        <div class="w-full lg:w-1/3 border rounded-lg p-4 shadow h-fit font-medium">
+            <select class="w-full border p-3 rounded text-sm text-[#CACACA]">
+                <option disabled selected class="text-[#CACACA]">All Categories</option>
+                <option>Mobiles</option>
+                <option>Laptops</option>
+            </select>
+            <div class="space-y-4">
+                <div class="w-full max-w-md p-4">
+                    <label class="font-semibold text-black block mb-2 lg:text-md text-sm">Select Your Range</label>
+
+                    <div class="flex justify-between text-sm font-semibold text-black mb-1">
+                        <span>₹0</span>
+                        <span id="price-value">₹35000</span>
+                    </div>
+
+                    <input type="range" min="0" max="35000" value="5000"
+                        class="w-full h-1 bg-[#B8B8B8] rounded-lg appearance-none cursor-pointer accent-[#FF3131]"
+                        oninput="document.getElementById('price-value').textContent = `₹${this.value}`">
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-black block mb-2 lg:text-md text-sm">Physical Condition</h3>
+                    <select class="w-full border p-3 rounded-md text-sm text-[#CACACA]">
+                        <option disabled selected class="text-[#FF3131]">Physical Condition</option>
+                        <option>Mobiles</option>
+                        <option>Laptops</option>
+                    </select>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-black block mb-2 lg:text-md text-sm">Product Type</h3>
+                    <select class="w-full border p-3 rounded-md text-sm text-[#CACACA]">
+                        <option disabled selected class="text-[#FF3131]">Product Type</option>
+                        <option>Mobiles</option>
+                        <option>Laptops</option>
+                    </select>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-black block mb-2 lg:text-md text-sm">RAM Size</h3>
+                    <select class="w-full border p-3 rounded-md text-sm text-[#CACACA]">
+                        <option disabled selected class="text-[#FF3131]">RAM Size</option>
+                        <option>Mobiles</option>
+                        <option>Laptops</option>
+                    </select>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-black block mb-2 lg:text-md text-sm">Display Size</h3>
+                    <select class="w-full border p-3 rounded-md text-sm text-[#CACACA]">
+                        <option disabled selected class="text-[#FF3131]">Display Size</option>
+                        <option>Mobiles</option>
+                        <option>Laptops</option>
+                    </select>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-black block mb-2 lg:text-md text-sm">Processor</h3>
+                    <select class="w-full border p-3 rounded-md text-sm text-[#CACACA]">
+                        <option disabled selected class="text-[#FF3131]">Processor</option>
+                        <option>Mobiles</option>
+                        <option>Laptops</option>
+                    </select>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-black block mb-2 lg:text-md text-sm">City</h3>
+                    <select class="w-full border p-3  text-sm text-[#CACACA] rounded-md">
+                        <option disabled selected class="text-[#FF3131]">City</option>
+                        <option>Mobiles</option>
+                        <option>Laptops</option>
+                    </select>
+                </div>
+
+                <div class="bg-[#FFF3F3] p-4 border border-[#B8B8B8] rounded-md">
+                    <p class="font-semibold mb-2">Features</p>
+                    <div class="flex flex-col gap-2">
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            360 Degree Rotation
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            5G Network Support
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            Backlit Keyboard
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            Bluetooth
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            Detachable Keyboard
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            Ethernet Port
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            Face Recognition
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            Fingerprint Scanner
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            HDMI Port
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            SD Card Slot
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            Speakers & Audio Jack
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            Thunderbolt Port
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            Touch Screen
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            TPM (Trusted Platform Module)
+
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm">
+                            <span class="relative w-4 h-4">
+                                <input type="checkbox"
+                                    class="peer appearance-none w-full h-full rounded-full border-2 border-[#FF3131] checked:bg-[#FF3131] checked:border[#FF3131] transition duration-200" />
+                                <span
+                                    class="pointer-events-none absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 peer-checked:scale-100 transition duration-200"></span>
+                            </span>
+                            VGA Port
+                        </label>
+                    </div>
+                </div>
+
+                <button class="w-full bg-[#FF3131] text-white py-3 lg:text-lg text-sm font-medium rounded hover:bg-red-700">
+                    Search
+                </button>
+                <button class="w-full  text-[#000] py-2 rounded hover:bg-[#FF3131] lg:text-lg text-sm">
+                    Reset Search
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Laptop Cards -->
+        <div class="w-full lg:w-2/3">
+            <div class="">
+                <h1 class="text-[#000] font-semibold text-lg">Heading H1</h1>
+                <p class="text-sm lg:text-md max-w-[925px]">Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                    industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a
+                    galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into.</p>
+            </div>
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                <!-- Card -->
+                <div class="border rounded-lg shadow  max-w-xs">
+                    <!-- Featured badge + Wishlist icon -->
+                    <div class="relative">
+                        <img src="image/productl.png" alt="Laptop" class="w-full  object-cover rounded" />
+                        <span
+                            class="absolute top-2 left-2 bg-[#FF3131] text-white text-xs px-2 py-1 rounded-sm">Featured</span>
+                        <button class="absolute top-2 right-2 text-[#FF3131] text-xl bg-[#fff] rounded-full w-10 h-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="p-3">
+                        <div class="text-center">
+                            <h4 class="mt-3 font-semibold text-sm leading-snug">
+                                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand Laptop Near Chandani
+                                Didi,
+                                Faridabad
+                            </h4>
+
+
+                            <p class="text-[13px] text-[#D9D9D9]  font-semibold">Sold by –>Refubazar Hub</p>
+
+
+                            <div class="mt-2">
+                                <input type="text" value="HP/Modal No" readonly
+                                    class="w-full border rounded px-3 py-1 text-sm text-[#000] font-semibold bg-gray-100 cursor-default text-center" />
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between mt-2 text-xs gap-2">
+                            <span class="flex items-center gap-1 bg-[#FFC862] text-[#000] px-2 py-0.5 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-[12px]"></i>
+                                Faridabad
+                            </span>
+                            <span class="bg-[#000] text-[#fff] px-2 py-0.5 rounded-sm">43.25 KM</span>
+                        </div>
+
+
+                        <p class="text-[#000] font-bold text-lg mt-2">₹16599</p>
+
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <button class="bg-[#FF3131] text-white text-sm px-4 py-2 rounded">View</button>
+
+                            <div class="relative flex items-center">
+
+                                <div
+                                    class="absolute -top-2  right-[126px] w-10 h-10 bg-[#FF3131] text-white flex items-center justify-center rounded-full shadow-md z-10">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+
+
+                                <button class="flex items-center gap-1 bg-yellow-200 text-yellow-800 text-sm ">
+                                    <span>9658******</span>
+                                    <span class="bg-[#FF3131] text-white text-xs px-2 py-1 ">Show</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Repeat cards as needed -->
+                <div class="border rounded-lg shadow  max-w-xs">
+                    <!-- Featured badge + Wishlist icon -->
+                    <div class="relative">
+                        <img src="image/productl.png" alt="Laptop" class="w-full  object-cover rounded" />
+                        <span
+                            class="absolute top-2 left-2 bg-[#FF3131] text-white text-xs px-2 py-1 rounded-sm">Featured</span>
+                        <button class="absolute top-2 right-2 text-[#FF3131] text-xl bg-[#fff] rounded-full w-10 h-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="p-3">
+                        <div class="text-center">
+                            <h4 class="mt-3 font-semibold text-sm leading-snug">
+                                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand Laptop Near Chandani
+                                Didi,
+                                Faridabad
+                            </h4>
+
+
+                            <p class="text-[13px] text-[#D9D9D9]  font-semibold">Sold by –>Refubazar Hub</p>
+
+
+                            <div class="mt-2">
+                                <input type="text" value="HP/Modal No" readonly
+                                    class="w-full border rounded px-3 py-1 text-sm text-[#000] font-semibold bg-gray-100 cursor-default text-center" />
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between mt-2 text-xs gap-2">
+                            <span class="flex items-center gap-1 bg-[#FFC862] text-[#000] px-2 py-0.5 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-[12px]"></i>
+                                Faridabad
+                            </span>
+                            <span class="bg-[#000] text-[#fff] px-2 py-0.5 rounded-sm">43.25 KM</span>
+                        </div>
+
+
+                        <p class="text-[#000] font-bold text-lg mt-2">₹16599</p>
+
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <button class="bg-[#FF3131] text-white text-sm px-4 py-2 rounded">View</button>
+
+                            <div class="relative flex items-center">
+
+                                <div
+                                    class="absolute -top-2  right-[126px] w-10 h-10 bg-[#FF3131] text-white flex items-center justify-center rounded-full shadow-md z-10">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+
+
+                                <button class="flex items-center gap-1 bg-yellow-200 text-yellow-800 text-sm ">
+                                    <span>9658******</span>
+                                    <span class="bg-[#FF3131] text-white text-xs px-2 py-1 ">Show</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="border rounded-lg shadow  max-w-xs">
+                    <!-- Featured badge + Wishlist icon -->
+                    <div class="relative">
+                        <img src="image/productl.png" alt="Laptop" class="w-full  object-cover rounded" />
+                        <span
+                            class="absolute top-2 left-2 bg-[#FF3131] text-white text-xs px-2 py-1 rounded-sm">Featured</span>
+                        <button class="absolute top-2 right-2 text-[#FF3131] text-xl bg-[#fff] rounded-full w-10 h-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="p-3">
+                        <div class="text-center">
+                            <h4 class="mt-3 font-semibold text-sm leading-snug">
+                                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand Laptop Near Chandani
+                                Didi,
+                                Faridabad
+                            </h4>
+
+
+                            <p class="text-[13px] text-[#D9D9D9]  font-semibold">Sold by –>Refubazar Hub</p>
+
+
+                            <div class="mt-2">
+                                <input type="text" value="HP/Modal No" readonly
+                                    class="w-full border rounded px-3 py-1 text-sm text-[#000] font-semibold bg-gray-100 cursor-default text-center" />
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between mt-2 text-xs gap-2">
+                            <span class="flex items-center gap-1 bg-[#FFC862] text-[#000] px-2 py-0.5 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-[12px]"></i>
+                                Faridabad
+                            </span>
+                            <span class="bg-[#000] text-[#fff] px-2 py-0.5 rounded-sm">43.25 KM</span>
+                        </div>
+
+
+                        <p class="text-[#000] font-bold text-lg mt-2">₹16599</p>
+
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <button class="bg-[#FF3131] text-white text-sm px-4 py-2 rounded">View</button>
+
+                            <div class="relative flex items-center">
+
+                                <div
+                                    class="absolute -top-2  right-[126px] w-10 h-10 bg-[#FF3131] text-white flex items-center justify-center rounded-full shadow-md z-10">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+
+
+                                <button class="flex items-center gap-1 bg-yellow-200 text-yellow-800 text-sm ">
+                                    <span>9658******</span>
+                                    <span class="bg-[#FF3131] text-white text-xs px-2 py-1 ">Show</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="border rounded-lg shadow  max-w-xs">
+                    <!-- Featured badge + Wishlist icon -->
+                    <div class="relative">
+                        <img src="image/productl.png" alt="Laptop" class="w-full  object-cover rounded" />
+                        <span
+                            class="absolute top-2 left-2 bg-[#FF3131] text-white text-xs px-2 py-1 rounded-sm">Featured</span>
+                        <button class="absolute top-2 right-2 text-[#FF3131] text-xl bg-[#fff] rounded-full w-10 h-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="p-3">
+                        <div class="text-center">
+                            <h4 class="mt-3 font-semibold text-sm leading-snug">
+                                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand Laptop Near Chandani
+                                Didi,
+                                Faridabad
+                            </h4>
+
+
+                            <p class="text-[13px] text-[#D9D9D9]  font-semibold">Sold by –>Refubazar Hub</p>
+
+
+                            <div class="mt-2">
+                                <input type="text" value="HP/Modal No" readonly
+                                    class="w-full border rounded px-3 py-1 text-sm text-[#000] font-semibold bg-gray-100 cursor-default text-center" />
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between mt-2 text-xs gap-2">
+                            <span class="flex items-center gap-1 bg-[#FFC862] text-[#000] px-2 py-0.5 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-[12px]"></i>
+                                Faridabad
+                            </span>
+                            <span class="bg-[#000] text-[#fff] px-2 py-0.5 rounded-sm">43.25 KM</span>
+                        </div>
+
+
+                        <p class="text-[#000] font-bold text-lg mt-2">₹16599</p>
+
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <button class="bg-[#FF3131] text-white text-sm px-4 py-2 rounded">View</button>
+
+                            <div class="relative flex items-center">
+
+                                <div
+                                    class="absolute -top-2  right-[126px] w-10 h-10 bg-[#FF3131] text-white flex items-center justify-center rounded-full shadow-md z-10">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+
+
+                                <button class="flex items-center gap-1 bg-yellow-200 text-yellow-800 text-sm ">
+                                    <span>9658******</span>
+                                    <span class="bg-[#FF3131] text-white text-xs px-2 py-1 ">Show</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="border rounded-lg shadow  max-w-xs">
+                    <!-- Featured badge + Wishlist icon -->
+                    <div class="relative">
+                        <img src="image/productl.png" alt="Laptop" class="w-full  object-cover rounded" />
+                        <span
+                            class="absolute top-2 left-2 bg-[#FF3131] text-white text-xs px-2 py-1 rounded-sm">Featured</span>
+                        <button class="absolute top-2 right-2 text-[#FF3131] text-xl bg-[#fff] rounded-full w-10 h-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="p-3">
+                        <div class="text-center">
+                            <h4 class="mt-3 font-semibold text-sm leading-snug">
+                                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand Laptop Near Chandani
+                                Didi,
+                                Faridabad
+                            </h4>
+
+
+                            <p class="text-[13px] text-[#D9D9D9]  font-semibold">Sold by –>Refubazar Hub</p>
+
+
+                            <div class="mt-2">
+                                <input type="text" value="HP/Modal No" readonly
+                                    class="w-full border rounded px-3 py-1 text-sm text-[#000] font-semibold bg-gray-100 cursor-default text-center" />
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between mt-2 text-xs gap-2">
+                            <span class="flex items-center gap-1 bg-[#FFC862] text-[#000] px-2 py-0.5 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-[12px]"></i>
+                                Faridabad
+                            </span>
+                            <span class="bg-[#000] text-[#fff] px-2 py-0.5 rounded-sm">43.25 KM</span>
+                        </div>
+
+
+                        <p class="text-[#000] font-bold text-lg mt-2">₹16599</p>
+
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <button class="bg-[#FF3131] text-white text-sm px-4 py-2 rounded">View</button>
+
+                            <div class="relative flex items-center">
+
+                                <div
+                                    class="absolute -top-2  right-[126px] w-10 h-10 bg-[#FF3131] text-white flex items-center justify-center rounded-full shadow-md z-10">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+
+
+                                <button class="flex items-center gap-1 bg-yellow-200 text-yellow-800 text-sm ">
+                                    <span>9658******</span>
+                                    <span class="bg-[#FF3131] text-white text-xs px-2 py-1 ">Show</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="border rounded-lg shadow  max-w-xs">
+                    <!-- Featured badge + Wishlist icon -->
+                    <div class="relative">
+                        <img src="image/productl.png" alt="Laptop" class="w-full  object-cover rounded" />
+                        <span
+                            class="absolute top-2 left-2 bg-[#FF3131] text-white text-xs px-2 py-1 rounded-sm">Featured</span>
+                        <button class="absolute top-2 right-2 text-[#FF3131] text-xl bg-[#fff] rounded-full w-10 h-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="p-3">
+                        <div class="text-center">
+                            <h4 class="mt-3 font-semibold text-sm leading-snug">
+                                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand Laptop Near Chandani
+                                Didi,
+                                Faridabad
+                            </h4>
+
+
+                            <p class="text-[13px] text-[#D9D9D9]  font-semibold">Sold by –>Refubazar Hub</p>
+
+
+                            <div class="mt-2">
+                                <input type="text" value="HP/Modal No" readonly
+                                    class="w-full border rounded px-3 py-1 text-sm text-[#000] font-semibold bg-gray-100 cursor-default text-center" />
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between mt-2 text-xs gap-2">
+                            <span class="flex items-center gap-1 bg-[#FFC862] text-[#000] px-2 py-0.5 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-[12px]"></i>
+                                Faridabad
+                            </span>
+                            <span class="bg-[#000] text-[#fff] px-2 py-0.5 rounded-sm">43.25 KM</span>
+                        </div>
+
+
+                        <p class="text-[#000] font-bold text-lg mt-2">₹16599</p>
+
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <button class="bg-[#FF3131] text-white text-sm px-4 py-2 rounded">View</button>
+
+                            <div class="relative flex items-center">
+
+                                <div
+                                    class="absolute -top-2  right-[126px] w-10 h-10 bg-[#FF3131] text-white flex items-center justify-center rounded-full shadow-md z-10">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+
+
+                                <button class="flex items-center gap-1 bg-yellow-200 text-yellow-800 text-sm ">
+                                    <span>9658******</span>
+                                    <span class="bg-[#FF3131] text-white text-xs px-2 py-1 ">Show</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="border rounded-lg shadow  max-w-xs">
+                    <!-- Featured badge + Wishlist icon -->
+                    <div class="relative">
+                        <img src="image/productl.png" alt="Laptop" class="w-full  object-cover rounded" />
+                        <span
+                            class="absolute top-2 left-2 bg-[#FF3131] text-white text-xs px-2 py-1 rounded-sm">Featured</span>
+                        <button class="absolute top-2 right-2 text-[#FF3131] text-xl bg-[#fff] rounded-full w-10 h-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="p-3">
+                        <div class="text-center">
+                            <h4 class="mt-3 font-semibold text-sm leading-snug">
+                                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand Laptop Near Chandani
+                                Didi,
+                                Faridabad
+                            </h4>
+
+
+                            <p class="text-[13px] text-[#D9D9D9]  font-semibold">Sold by –>Refubazar Hub</p>
+
+
+                            <div class="mt-2">
+                                <input type="text" value="HP/Modal No" readonly
+                                    class="w-full border rounded px-3 py-1 text-sm text-[#000] font-semibold bg-gray-100 cursor-default text-center" />
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between mt-2 text-xs gap-2">
+                            <span class="flex items-center gap-1 bg-[#FFC862] text-[#000] px-2 py-0.5 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-[12px]"></i>
+                                Faridabad
+                            </span>
+                            <span class="bg-[#000] text-[#fff] px-2 py-0.5 rounded-sm">43.25 KM</span>
+                        </div>
+
+
+                        <p class="text-[#000] font-bold text-lg mt-2">₹16599</p>
+
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <button class="bg-[#FF3131] text-white text-sm px-4 py-2 rounded">View</button>
+
+                            <div class="relative flex items-center">
+
+                                <div
+                                    class="absolute -top-2  right-[126px] w-10 h-10 bg-[#FF3131] text-white flex items-center justify-center rounded-full shadow-md z-10">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+
+
+                                <button class="flex items-center gap-1 bg-yellow-200 text-yellow-800 text-sm ">
+                                    <span>9658******</span>
+                                    <span class="bg-[#FF3131] text-white text-xs px-2 py-1 ">Show</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="border rounded-lg shadow  max-w-xs">
+                    <!-- Featured badge + Wishlist icon -->
+                    <div class="relative">
+                        <img src="image/productl.png" alt="Laptop" class="w-full  object-cover rounded" />
+                        <span
+                            class="absolute top-2 left-2 bg-[#FF3131] text-white text-xs px-2 py-1 rounded-sm">Featured</span>
+                        <button class="absolute top-2 right-2 text-[#FF3131] text-xl bg-[#fff] rounded-full w-10 h-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="p-3">
+                        <div class="text-center">
+                            <h4 class="mt-3 font-semibold text-sm leading-snug">
+                                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand Laptop Near Chandani
+                                Didi,
+                                Faridabad
+                            </h4>
+
+
+                            <p class="text-[13px] text-[#D9D9D9]  font-semibold">Sold by –>Refubazar Hub</p>
+
+
+                            <div class="mt-2">
+                                <input type="text" value="HP/Modal No" readonly
+                                    class="w-full border rounded px-3 py-1 text-sm text-[#000] font-semibold bg-gray-100 cursor-default text-center" />
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between mt-2 text-xs gap-2">
+                            <span class="flex items-center gap-1 bg-[#FFC862] text-[#000] px-2 py-0.5 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-[12px]"></i>
+                                Faridabad
+                            </span>
+                            <span class="bg-[#000] text-[#fff] px-2 py-0.5 rounded-sm">43.25 KM</span>
+                        </div>
+
+
+                        <p class="text-[#000] font-bold text-lg mt-2">₹16599</p>
+
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <button class="bg-[#FF3131] text-white text-sm px-4 py-2 rounded">View</button>
+
+                            <div class="relative flex items-center">
+
+                                <div
+                                    class="absolute -top-2  right-[126px] w-10 h-10 bg-[#FF3131] text-white flex items-center justify-center rounded-full shadow-md z-10">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+
+
+                                <button class="flex items-center gap-1 bg-yellow-200 text-yellow-800 text-sm ">
+                                    <span>9658******</span>
+                                    <span class="bg-[#FF3131] text-white text-xs px-2 py-1 ">Show</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="border rounded-lg shadow  max-w-xs">
+                    <!-- Featured badge + Wishlist icon -->
+                    <div class="relative">
+                        <img src="image/productl.png" alt="Laptop" class="w-full  object-cover rounded" />
+                        <span
+                            class="absolute top-2 left-2 bg-[#FF3131] text-white text-xs px-2 py-1 rounded-sm">Featured</span>
+                        <button class="absolute top-2 right-2 text-[#FF3131] text-xl bg-[#fff] rounded-full w-10 h-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="p-3">
+                        <div class="text-center">
+                            <h4 class="mt-3 font-semibold text-sm leading-snug">
+                                Stylish HP ProBook 430 G4 Laptop in Top Condition – Second Hand Laptop Near Chandani
+                                Didi,
+                                Faridabad
+                            </h4>
+
+
+                            <p class="text-[13px] text-[#D9D9D9]  font-semibold">Sold by –>Refubazar Hub</p>
+
+
+                            <div class="mt-2">
+                                <input type="text" value="HP/Modal No" readonly
+                                    class="w-full border rounded px-3 py-1 text-sm text-[#000] font-semibold bg-gray-100 cursor-default text-center" />
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between mt-2 text-xs gap-2">
+                            <span class="flex items-center gap-1 bg-[#FFC862] text-[#000] px-2 py-0.5 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-[12px]"></i>
+                                Faridabad
+                            </span>
+                            <span class="bg-[#000] text-[#fff] px-2 py-0.5 rounded-sm">43.25 KM</span>
+                        </div>
+
+
+                        <p class="text-[#000] font-bold text-lg mt-2">₹16599</p>
+
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <button class="bg-[#FF3131] text-white text-sm px-4 py-2 rounded">View</button>
+
+                            <div class="relative flex items-center">
+
+                                <div
+                                    class="absolute -top-2  right-[126px] w-10 h-10 bg-[#FF3131] text-white flex items-center justify-center rounded-full shadow-md z-10">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+
+
+                                <button class="flex items-center gap-1 bg-yellow-200 text-yellow-800 text-sm ">
+                                    <span>9658******</span>
+                                    <span class="bg-[#FF3131] text-white text-xs px-2 py-1 ">Show</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <!-- Add more cards similarly -->
+            </div>
+            <div class="flex justify-center items-center mt-6">
+                <nav class="inline-flex items-center gap-2 text-sm">
+                    <button
+                        class="w-9 h-9 rounded-full bg-white text-gray-600 hover:bg-red-100 hover:text-red-500 border border-gray-300 flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <button
+                        class="w-9 h-9 rounded-full bg-red-500 text-white flex items-center justify-center">1</button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-white text-gray-700 hover:bg-red-100 hover:text-red-500 border border-gray-300 flex items-center justify-center">2</button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-white text-gray-700 hover:bg-red-100 hover:text-red-500 border border-gray-300 flex items-center justify-center">3</button>
+
+                    <span class="w-9 h-9 flex items-center justify-center text-gray-400">...</span>
+
+                    <button
+                        class="w-9 h-9 rounded-full bg-white text-gray-700 hover:bg-red-100 hover:text-red-500 border border-gray-300 flex items-center justify-center">8</button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-white text-gray-700 hover:bg-red-100 hover:text-red-500 border border-gray-300 flex items-center justify-center">9</button>
+
+                    <button
+                        class="w-9 h-9 rounded-full bg-white text-gray-600 hover:bg-red-100 hover:text-red-500 border border-gray-300 flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </nav>
+            </div>
+
+            <div class="mt-6">
+                <p class="text-[#000] max-w-[900px] font-semibold text-xs lg:text-sm">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make
+                    a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                    typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                    containing
+                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+                    including versions of
+                    Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled
+                    it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                    containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="relative">
+
+        <div
+            class="absolute -top-28 left-1/2 -translate-x-1/2 bg-red-600 text-white lg:p-6 px-3 py-2 rounded-lg shadow-lg w-full max-w-6xl z-10 h-48 flex lg:flex-row flex-col items-center justify-around">
+
+            <div class="text-[#fff]">
+                <h3 class="lg:text-4xl md:text-2xl text-xl font-semibold lg:mb-4 mb-2 text-center">Submit Your Listing
+                    Today!</h3>
+                <p class="text-sm text-center">Explore some of the best tips from around the city from our partners and
+                    friends.</p>
+            </div>
+
+            <button
+                class="lg:px-7 px-4 py-2 bg-white text-[#000] font-semibold rounded-md hover:bg-gray-100 transition text-sm lg:text-lg">
+                Submit Now
+            </button>
+        </div>
+
+
+        <footer class="bg-gray-900 text-white mt-28 pt-24 relative z-0">
+            <div class="max-w-7xl mx-auto px-4 plg:y-10 py-5">
+
+                <div class="mb-8">
+                    <img src="image/logo.png" alt="Logo" class="lg:w-64 w-40" />
+                </div>
+
+
+                <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-8 lg:place-items-center">
+
+                    <div>
+                        <strong class="block mb-2 lg:text-lg text-sm text-yellow-400">Contact Us</strong>
+                        <div class="text-xs lg:text-sm">
+                            <p class=" mb-1">D-29, Office No. 3, Ground Floor, Sector 3, Noida, UP 201301</p>
+                            <p class="text-sm mb-1">+91 89297 10102</p>
+                            <p class="text-sm mb-1">lapybazar@gmail.com</p>
+                            <p class="text-sm underline text-red-400 cursor-pointer">MSME Download Certificate</p>
+                        </div>
+                    </div>
+
+                    <!-- Useful Links -->
+                    <div>
+                        <strong class="block mb-2 lg:text-lg text-sm text-yellow-400">Useful Links</strong>
+                        <div class="lg:text-sm text-xs">
+                            <ul class="space-y-1 text-sm">
+                                <li>Reseller</li>
+                                <li>Dell Second Hand Laptop</li>
+                                <li>Lenovo Second Hand Laptop</li>
+                                <li>HP Second Hand Laptop</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div>
+                        <strong class="block mb-2 lg:text-lg text-sm text-yellow-400">Newsletter</strong>
+                        <p class="text-xs lg:text-sm">We don’t send spam so don’t worry.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- City List -->
+            <div
+                class="border-t border-[#395484] py-6 px-4 lg:text-[15px] text-xs text-[#fff] flex justify-center items-center">
+                <p class="text-center leading-6 max-w-[1400px]">
+                    <!-- Your city names here -->
+                    Adilabad | Agar Malwa | Agra | Ahmedabad | Ahmednagar | Aizawl | Ajmer
+                    | Akola | Alappuzha | Aligarh | Alipurduar | Alirajpur | Alluri
+                    Sitharama Raju | Almora | Alwar | Ambala | Ambedkar Nagar | Amethi |
+                    Amravati | Amreli | Amritsar | Amroha | Anakapalli | Anand | Anantapur
+                    | Anantnag | Angul | Anjaw | Annamayya | Anuppur | Araria | Aravalli |
+                    Ariyalur | Arwal | Ashoknagar | Auraiya | Aurangabad | Ayodhya |
+                    Azamgarh | Bagalkot | Bageshwar | Baghpat | Bahraich | Bajali | Baksa
+                    | Balaghat | Balangir | Balasore | Ballari | Ballia | Balod | Baloda
+                    Bazar | Balrampur | Banaskantha | Banda | Bandipora | Banka | Bankura
+                    | Banswara | Bapatla | Barabanki | Baramulla | Baran | Bareilly |
+                    Bargarh | Barmer | Barnala | Barpeta | Barwani | Bastar | Basti |
+                    Bathinda | Beed | Begusarai | Belagavi | Bemetara | Bengaluru Rural |
+                    Bengaluru Urban | Betul | Bhadohi | Bhadradri Kothagudem | Bhadrak |
+                    Bhagalpur | Bhandara | Bharatpur | Bharuch | Bhavnagar | Bhilwara |
+                    Bhind | Bhiwani | Bhojpur | Bhopal | Bichom | Bidar | Bijapur | Bijnor
+                    | Bikaner | Bilaspur | Birbhum | Bishnupur | Biswanath | Bokaro |
+                    Bongaigaon | Botad | Boudh | Budaun | Budgam | Bulandshahr | Buldhana
+                    | Bundi | Burhanpur | Buxar | Cachar | Central Delhi | Chamarajanagar
+                    | Chamba | Chamoli |
+                </p>
+            </div>
+
+            <!-- Bottom -->
+            <div
+                class="border-t border-[#395484] py-4 px-4 flex flex-col md:flex-row justify-around text-xs lg:text-sm text-[#fff] text-center">
+                <div>©2025 LapyBazar – All rights reserved.</div>
+                <div class="space-x-2 mt-1 md:mt-0 ">
+                    <a href="#" class="hover:text-white">Privacy Policy</a> |
+                    <a href="#" class="hover:text-white">Terms & Conditions</a> |
+                    <a href="#" class="hover:text-white">Returns & Exchanges</a> |
+                    <a href="#" class="hover:text-white">Shipping Policy</a>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="/assests/js/listscript.js"></script>
+
+</body>
+
+</html>
