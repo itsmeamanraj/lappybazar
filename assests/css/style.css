@@ -336,11 +336,6 @@ footer{
         width: 100%;
         background-color: var(--background-white);
     }
-    .container
-    {
-        width: 80%;
-        margin: 0 auto;
-    }
     .logocard-parent{
         width: 100%;
         display: flex;
@@ -472,27 +467,74 @@ footer{
 /* desktop-2 css end  */
 
 /* desktop-4 css */
-
-.cardwrapper{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 5% 0;
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: space-between;
 }
 
+/* Container to center content */
+.slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Hide scrollbar */
+#productSlider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+#productSlider::-webkit-scrollbar {
+  display: none;
+}
+
+#productSlider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Each card */
 .card {
+  flex: 0 0 23%; /* 4 in a row with some gap */
   background-color: white;
-  width: 100%;
-  width: 31%;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
-
 }
+
+/* Arrows */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.scroll-left {
+  left: -20px;
+}
+
+.scroll-right {
+  right: -20px;
+}
+
+
+
 
 .image-container {
   width: 100%;
@@ -719,9 +761,6 @@ height: 50px;
     .mobile-header{
         width: 100%;
     }
-    .container{
-        width: 95%;
-    }
      /* desktop-5 css */
         .logocard{
             width: 100%;
@@ -742,7 +781,8 @@ height: 50px;
   }
     /* desktop 4 css  */
 }
-/* media query css end  */
+
+/* Home Page css */
 /* Remove Bootstrap accordion arrow for FAQ */
 .accordion-button::after {
     display: none !important;
@@ -849,3 +889,48 @@ height: 50px;
     padding-top: 80px;
     padding-bottom: 80px;
 }
+
+/* .card-img{
+    width: 506;
+    height: 337;
+    top: 4253px;
+    left: 119px;
+    opacity: 1;
+    border-radius: 24px;
+} */
+.card-heading{
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 30px;
+    line-height: 148%;
+    letter-spacing: 0%;
+    color: #000000;
+}
+.cardsub-heading{
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    letter-spacing: 0%;
+}
+.card-button{
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background-color: #FF3131;
+    color: #ffffff;
+    border: none;
+}
+.sub-heading{
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: Light;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+/* End Home Page css  */
