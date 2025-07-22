@@ -40,7 +40,8 @@
         <nav>
             <!-- Navbar (Header) -->
             <header id="mainHeader"
-                class="flex justify-between lg:items-center items-start  px-6 py-4 shadow-md bg-[#000] relative">
+                class="fixed top-0 left-0 w-full z-50 flex justify-between lg:items-center items-start px-6 py-4 shadow-md bg-[#000] transition-colors duration-300">
+
                 <!-- Left Section -->
                 <div class=" flex gap-4 justify-center items-center ">
                     <!-- Logo -->
@@ -80,7 +81,7 @@
                 </div>
 
                 <!-- Hamburger Icon (Mobile) -->
-           <button id="bar" class="flex justify-center items-center w-10 h-10 rounded-full bg-[#FF3131] md:hidden">
+                <button id="bar" class="flex justify-center items-center w-10 h-10 rounded-full bg-[#FF3131] md:hidden">
                     <i class="fa-solid fa-bars text-xl text-white"></i>
                 </button>
 
@@ -104,13 +105,21 @@
                     <a href="#" class="hover:text-blue-600">Reseller</a>
                 </nav>
 
-                <div class="mt-4 flex flex-col gap-3">
+                <div class="">
                     <button class="flex items-center gap-2    py-1 ">
                         <!-- <img src="/lappybazar/image/current-Icons.png" alt="Location Icon" class="w-6 h-6" /> -->
-                        <div class="bg-[#FF3131] rounded-lg px-2">
-                            <p class="text-xs font-medium text-[#fff]">Click Here to Find Nearby Listings</p>
-                            <p class="text-xs text-[#fff]">Fetching Location</p>
-                        </div>
+                         <div class="bg-[#FF3131] border-none rounded-xl">
+                        <button class="flex items-center gap-2  rounded-xl px- py-1 ">
+                            
+                            <div class="bg-[#FF3131] flex justify-center items-center rounded-lg">
+                                <img src="./image/current-Icons.png" alt="Location Icon" class="w-6 h-6" />
+                               <div>
+                                 <p class="text-xs font-medium text-[#fff]">Click Here to Find Nearby Listings</p>
+                                <p class="text-xs text-[#fff]">Fetching Location</p>
+                               </div>
+                            </div>
+                        </button>
+                    </div>
                     </button>
                     <button
                         class="flex gap-2 justify-center items-baseline  px-4 py-2 rounded bg-[#FFC862] text-[#000]">
@@ -127,7 +136,7 @@
         </nav>
     </section>
 
-    <section class="main-content bg-cover bg-center min-h-screen flex items-center justify-center px-4"
+    <section class="main-content bg-cover bg-center lg:min-h-screen h-[400px] flex items-center justify-center px-4"
         style="background-image: url('./image/map.png');">
 
         <div class="lg:flex flex-col md:flex-row items-center justify-center gap-4 p-4 max-w-7xl mx-auto hidden">
@@ -162,7 +171,7 @@
             </div>
         </div>
         <!-- Mobile Responsive Search UI (visible on small screens only) -->
-        <div class="flex flex-col gap-2 p-4 md:hidden w-full max-w-xl mx-auto bg-[#fff] rounded-lg ">
+        <div class="flex flex-col gap-2 p-4 md:hidden w-full max-w-xl mx-auto bg-[#fff] rounded-lg mt-10">
             <!-- What Input -->
             <div class="w-full">
                 <h3 class="font-semibold text-black block mb-1 text-sm">What</h3>
