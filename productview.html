@@ -40,7 +40,7 @@
         <nav>
             <!-- Navbar (Header) -->
             <header id="mainHeader"
-                class="flex justify-between lg:items-center items-start  px-6 py-4 shadow-md bg-[#000] relative">
+                class="fixed top-0 left-0 w-full z-50 flex justify-between lg:items-center items-start px-6 py-4 shadow-md bg-[#000] transition-colors duration-300">
                 <!-- Left Section -->
                 <div class=" flex gap-4 justify-center items-center ">
                     <!-- Logo -->
@@ -104,13 +104,21 @@
                     <a href="#" class="hover:text-blue-600">Reseller</a>
                 </nav>
 
-                <div class="mt-4 flex flex-col gap-3">
+                <div class="">
                     <button class="flex items-center gap-2    py-1 ">
                         <!-- <img src="/lappybazar/image/current-Icons.png" alt="Location Icon" class="w-6 h-6" /> -->
-                        <div class="bg-[#FF3131] rounded-lg px-2">
-                            <p class="text-xs font-medium text-[#fff]">Click Here to Find Nearby Listings</p>
-                            <p class="text-xs text-[#fff]">Fetching Location</p>
-                        </div>
+                         <div class="bg-[#FF3131] border-none rounded-xl">
+                        <button class="flex items-center gap-2  rounded-xl px- py-1 ">
+                            
+                            <div class="bg-[#FF3131] flex justify-center items-center rounded-lg">
+                                <img src="./image/current-Icons.png" alt="Location Icon" class="w-6 h-6" />
+                               <div>
+                                 <p class="text-xs font-medium text-[#fff]">Click Here to Find Nearby Listings</p>
+                                <p class="text-xs text-[#fff]">Fetching Location</p>
+                               </div>
+                            </div>
+                        </button>
+                    </div>
                     </button>
                     <button
                         class="flex gap-2 justify-center items-baseline  px-4 py-2 rounded bg-[#FFC862] text-[#000]">
@@ -126,7 +134,7 @@
 
         </nav>
     </section>
-    <section class="custom_container py-5 lg:py-10">
+    <section class="custom_container py-5 pt-28">
         <!-- Font Awesome CDN for icons -->
 
 
@@ -585,7 +593,7 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </div>
-                        <div class="flex gap-5 lg:text-md text-sm lg:justify-start justify-between" >
+                        <div class="flex gap-5 lg:text-md text-sm lg:justify-start justify-between">
                             <p class="font-medium">Service</p>
                             <div class="text-yellow-400">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i>

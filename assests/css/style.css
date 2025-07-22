@@ -18,6 +18,18 @@ font-family: poppins;
     --text-yellow:#FFC862;
 }
 /* header css start */
+
+/* Hide horizontal scrollbar in WebKit (Chrome, Safari) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar in Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 header{
     position: fixed; /* make it float on top */
     top: 0;
