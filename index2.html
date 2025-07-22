@@ -53,7 +53,7 @@
 </head>
 
 <body class="font-poppins">
-    <section class="bg-[url('./image/banner.png')] bg-cover bg-center bg-no-repeat h-screen">
+    <section class="bg-[url('./image/banner.png')] bg-cover bg-center bg-no-repeat lg:h-screen ">
         <nav>
             <!-- Navbar (Header) -->
             <header id="mainHeader"
@@ -124,18 +124,19 @@
                 <div class="">
                     <button class="flex items-center gap-2    py-1 ">
                         <!-- <img src="/lappybazar/image/current-Icons.png" alt="Location Icon" class="w-6 h-6" /> -->
-                            <div class="bg-[#FF3131] border-none rounded-xl">
-                        <button class="flex items-center gap-2  rounded-xl px- py-1 ">
-                            
-                            <div class="bg-[#FF3131] flex justify-center items-center rounded-lg">
-                                <img src="./image/current-Icons.png" alt="Location Icon" class="w-6 h-6" />
-                               <div>
-                                 <p class="text-xs font-medium text-[#fff]">Click Here to Find Nearby Listings</p>
-                                <p class="text-xs text-[#fff]">Fetching Location</p>
-                               </div>
-                            </div>
-                        </button>
-                    </div>
+                        <div class="bg-[#FF3131] border-none rounded-xl">
+                            <button class="flex items-center gap-2  rounded-xl px- py-1 ">
+
+                                <div class="bg-[#FF3131] flex justify-center items-center rounded-lg">
+                                    <img src="./image/current-Icons.png" alt="Location Icon" class="w-6 h-6" />
+                                    <div>
+                                        <p class="text-xs font-medium text-[#fff]">Click Here to Find Nearby Listings
+                                        </p>
+                                        <p class="text-xs text-[#fff]">Fetching Location</p>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
                     </button>
                     <button
                         class="flex gap-2 justify-center items-baseline  px-4 py-2 rounded bg-[#FFC862] text-[#000]">
@@ -150,11 +151,11 @@
             </div>
 
         </nav>
-        <div>
+        <div class="lg:block hidden">
             <div>
                 <div class="pt-[100px]  text-white">
                     <!-- Hero Section -->
-                    <div class="text-center mt-5 pt-9 px-4">
+                    <div class="text-center mt-5 lg:pt-9 px-4">
                         <h1 class="text-xl md:text-3xl font-semibold ">Buy Second-Hand Laptops from Nearby
                             Sellers</h1>
                         <p class="text-xs md:text-sm mt-2">Find great deals on second-hand laptops from local sellers
@@ -211,6 +212,70 @@
                             </div>
                             <div class="mt-4">
                                 <a href="#" class="font-medium text-white ml-80">More Brands &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div>
+                <div class="pt-[100px]  text-white">
+                    <!-- Hero Section -->
+                    <div class="text-center mt-5 lg:pt-9 px-4">
+                        <h1 class="text-xl md:text-3xl font-semibold ">Buy Second-Hand Laptops from Nearby
+                            Sellers</h1>
+                        <p class="text-xs md:text-sm mt-2">Find great deals on second-hand laptops from local sellers
+                        </p>
+
+                        <!-- Search Section -->
+                        <div
+                            class="flex flex-col gap-2 p-4 md:hidden w-full max-w-xl mx-auto bg-[#fff] rounded-lg mt-10">
+                            <!-- What Input -->
+                            <div class="w-full">
+                                <h3 class="font-semibold text-black block mb-1 text-sm">What</h3>
+                                <input type="text" placeholder="Ex: Laptop Search...."
+                                    class="w-full border p-3 text-sm text-[#626262] rounded-md focus:outline-none" />
+                            </div>
+
+                            <!-- Location Input -->
+                            <div class="w-full">
+                                <h3 class="font-semibold text-black block mb-1 text-sm">Location</h3>
+                                <div class="relative w-full">
+                                    <input type="text" placeholder="Your City"
+                                        class="w-full border p-3 text-sm text-[#626262] rounded-md focus:outline-none pr-10" />
+                                    <div
+                                        class="absolute top-1/2 right-3 transform -translate-y-1/2 text-[#FF3131] pointer-events-none">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Find Listing Button -->
+                            <button
+                                class="flex items-center justify-center gap-2 text-white bg-[#ff3131] rounded-full p-3 w-full text-sm font-medium">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Find Listing
+                            </button>
+                        </div>
+
+                        <!-- Brand Section -->
+                        <div class=" lg:mt-10 mt-5">
+                            <h5 class="text-lg font-medium mb-4 lg:mr-80">Choose a Brand</h5>
+                            <div class="flex justify-center flex-wrap gap-4">
+                                <div class="bg-white p-3 rounded">
+                                    <img src="image/icons/dell-logo.png" alt="Dell" class="lg:h-10 w-full" />
+                                </div>
+                                <div class="bg-white p-3 rounded">
+                                    <img src="image/icons/lenevo-logo.png" alt="Lenovo" class="lg:h-10 w-full" />
+                                </div>
+                                <div class="bg-white p-3 rounded">
+                                    <img src="image/icons/hp-logo.png" alt="HP" class="lg:h-10 w-full" />
+                                </div>
+                            </div>
+                            <div class=" mt-2">
+                                <a href="#" class="font-medium text-white lg:ml-80 ">More Brands &gt;</a>
                             </div>
                         </div>
                     </div>
@@ -1945,7 +2010,9 @@
             </div>
             <div class="relative">
                 <!-- Timeline Vertical Line -->
-               <div class="hidden md:block absolute h-3/4 left-1/2 top-0 bottom-0 border-l-2 border-[#ff3b3b] border-dashed  -translate-x-1/2 z-0 mt-48"></div>
+                <div
+                    class="hidden md:block absolute h-3/4 left-1/2 top-0 bottom-0 border-l-2 border-[#ff3b3b] border-dashed  -translate-x-1/2 z-0 mt-48">
+                </div>
 
 
                 <div class="relative space-y-16">
@@ -1960,10 +2027,12 @@
                         </div>
                         <!-- Text -->
                         <div class="text-center md:text-left mt-6 md:mt-0">
-                            <h3 class="text-xl font-semibold text-[#222] mb-2 max-w-[300px]">Need a Second Hand Laptop? Start Your
+                            <h3 class="text-xl font-semibold text-[#222] mb-2 max-w-[300px]">Need a Second Hand Laptop?
+                                Start Your
                                 Search
                                 Now!</h3>
-                            <p class="text-[#666] text-sm max-w-[450px]">Searching for a reliable second-hand laptop near you? Get the
+                            <p class="text-[#666] text-sm max-w-[450px]">Searching for a reliable second-hand laptop
+                                near you? Get the
                                 best deals from verified sellers and resellers on Lapybazar.</p>
                         </div>
                     </div>
@@ -2080,7 +2149,8 @@
                     <div class="absolute top-[10%] left-0 w-full h-[80%] z-0">
                         <img src="image/vector.png" alt="">
                     </div>
-                    <img src="image/icons/3rdimg.png" alt="LapyBazar Laptop" class="relative z-10 lg:max-w-[340px] max-w-56" />
+                    <img src="image/icons/3rdimg.png" alt="LapyBazar Laptop"
+                        class="relative z-10 lg:max-w-[340px] max-w-56" />
                 </div>
             </div>
         </div>
