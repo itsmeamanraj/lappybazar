@@ -27,6 +27,17 @@
 
         }
     </style>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,8 +50,8 @@
     <section>
         <nav>
             <!-- Navbar (Header) -->
-            <header id="mainHeader"
-                class="fixed top-0 left-0 w-full z-50 flex justify-between lg:items-center items-start px-6 py-4 shadow-md bg-[#000] transition-colors duration-300">
+            <header id=""
+                class="fixed top-0 left-0 w-full z-50 flex justify-between lg:items-center items-start px-6 py-4 shadow-md bg-[#000]">
                 <!-- Left Section -->
                 <div class=" flex gap-4 justify-center items-center ">
                     <!-- Logo -->
@@ -80,7 +91,8 @@
                 </div>
 
                 <!-- Hamburger Icon (Mobile) -->
-                <button id="bar" class="flex justify-center items-center w-10 h-10 rounded-full bg-[#FF3131] md:hidden">
+                <button id="bar"
+                    class="flex justify-center items-center w-10 h-10 rounded-full bg-[#FF3131] lg:hidden">
                     <i class="fa-solid fa-bars text-xl text-white"></i>
                 </button>
 
@@ -90,7 +102,7 @@
 
             <!-- Mobile Header -->
             <div id="sideMenu"
-                class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col gap-4 p-6">
+                class="fixed top-0 right-0 h-full w-64 md:w-96 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col gap-4 p-6">
 
                 <div class="flex justify-between items-center">
 
@@ -104,33 +116,27 @@
                     <a href="#" class="hover:text-blue-600">Reseller</a>
                 </nav>
 
-                <div class="">
-                    <button class="flex items-center gap-2    py-1 ">
-                        <!-- <img src="/lappybazar/image/current-Icons.png" alt="Location Icon" class="w-6 h-6" /> -->
-                         <div class="bg-[#FF3131] border-none rounded-xl">
-                        <button class="flex items-center gap-2  rounded-xl px- py-1 ">
-                            
-                            <div class="bg-[#FF3131] flex justify-center items-center rounded-lg">
-                                <img src="./image/current-Icons.png" alt="Location Icon" class="w-6 h-6" />
-                               <div>
-                                 <p class="text-xs font-medium text-[#fff]">Click Here to Find Nearby Listings</p>
-                                <p class="text-xs text-[#fff]">Fetching Location</p>
-                               </div>
-                            </div>
-                        </button>
-                    </div>
-                    </button>
-                    <button
-                        class="flex gap-2 justify-center items-baseline  px-4 py-2 rounded bg-[#FFC862] text-[#000]">
-                        <i class="fa-regular fa-user w-5 h-5"></i>
-                        <p class="text-md font-medium ">Login/Sign Up</p>
-                    </button>
-                    <button
-                        class="bg-[#FF3131] text-white text-md font-medium  px-4 py-2 rounded flex justify-center items-center gap-2">
-                        <i class="fa-solid fa-plus"></i> Add Listing
+                <div class="flex items-center justify-center px-4 py-2">
+                    <button class="flex items-center gap-3 bg-[#FF3131] rounded-xl px-4 py-2">
+                        <img src="./image/current-Icons.png" alt="Location Icon" class="w-6 h-6" />
+                        <div class="text-left">
+                            <p class="text-xs font-medium text-white">Click Here to Find Nearby Listings</p>
+                            <p class="text-xs text-white">Fetching Location</p>
+                        </div>
                     </button>
                 </div>
+
+                </button>
+                <button class="flex gap-2 justify-center items-baseline  px-4 py-2 rounded bg-[#FFC862] text-[#000]">
+                    <i class="fa-regular fa-user w-5 h-5"></i>
+                    <p class="text-md font-medium ">Login/Sign Up</p>
+                </button>
+                <button
+                    class="bg-[#FF3131] text-white text-md font-medium  px-4 py-2 rounded flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-plus"></i> Add Listing
+                </button>
             </div>
+
 
         </nav>
     </section>
@@ -141,41 +147,56 @@
         <div class="flex flex-col md:flex-row gap-12 lg:p-6 justify-center  ">
             <!-- Left: Product Image & Thumbnails -->
             <div class="flex flex-col items-center">
-                <div class="relative ">
-                    <img src="image/productviewtwo.png" alt="HP Laptop"
-                        class="w-[550px] lg:h-[400px] object-cover  shadow-md" />
+                <!-- Main Image -->
+                <div class="relative">
+                    <img id="mainProductImage" src="image/productviewtwo.png" alt="HP Laptop"
+                        class="w-[550px] lg:h-[400px] object-cover shadow-md" />
                     <button class="absolute top-2 right-2 text-red-500 text-xl">
-                        <img src="image/info.png" alt="" srcset="" class="bg-[#fff] p-1 rounded-md w-5">
+                        <img src="image/info.png" alt="" class="bg-[#fff] p-1 rounded-md w-5" />
                         <i
-                            class="fa-regular fa-heart text-[#fff] bg-[#ff3131] rounded-full p-1 mt-2 w-6 h-6 text-sm"></i></button>
+                            class="fa-regular fa-heart text-[#fff] bg-[#ff3131] rounded-full p-1 mt-2 w-6 h-6 text-sm"></i>
+                    </button>
                 </div>
 
-                <!-- Thumbnails -->
-                <div class="relative mt-4">
+                <!-- Thumbnail Carousel -->
+                <div class="relative mt-4 w-[335px] sm:w-[400px] lg:w-[500px]">
                     <!-- Left Arrow -->
-                    <button
-                        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-9 h-9 shadow">
+                    <button id="scrollLeft5"
+                        class="absolute -left-10 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-9 h-9 shadow hidden lg:block">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
 
-                    <!-- Thumbnails Scrollable Row -->
-                    <div class="flex gap-2 overflow-x-auto no-scrollbar px-10">
-                        <img src="image/productviewone.png" class="w-16 h-16 rounded-md border" />
-                        <img src="image/productviewone.png" class="w-16 h-16 rounded-md border" />
-                        <img src="image/productviewone.png" class="w-16 h-16 rounded-md border" />
-                        <img src="image/productviewone.png" class="w-16 h-16 rounded-md border" />
-                        <img src="image/productviewone.png" class="w-16 h-16 rounded-md border" />
-                        <img src="image/productviewone.png" class="w-16 h-16 rounded-md border" />
+                    <!-- Scrollable Thumbnails -->
+                    <div id="carouselContainer5" class="flex gap-2 overflow-x-auto scroll-smooth no-scrollbar  snap-x">
+                        <img src="image/productviewone.png"
+                            class="w-20 h-20 rounded-md border snap-start cursor-pointer" />
+                        <img src="image/productviewtwo.png"
+                            class="w-20 h-20 rounded-md border snap-start cursor-pointer" />
+                        <img src="image/productviewone.png"
+                            class="w-20 h-20 rounded-md border snap-start cursor-pointer" />
+                        <img src="image/productviewone.png"
+                            class="w-20 h-20 rounded-md border snap-start cursor-pointer" />
+                        <img src="image/productviewtwo.png"
+                            class="w-20 h-20 rounded-md border snap-start cursor-pointer" />
+                        <img src="image/productviewone.png"
+                            class="w-20 h-20 rounded-md border snap-start cursor-pointer" />
+                        <img src="image/productviewone.png"
+                            class="w-20 h-20 rounded-md border snap-start cursor-pointer" />
+                        <img src="image/productviewone.png"
+                            class="w-20 h-20 rounded-md border snap-start cursor-pointer" />
+                        <img src="image/productviewone.png"
+                            class="w-20 h-20 rounded-md border snap-start cursor-pointer" />
                     </div>
 
                     <!-- Right Arrow -->
-                    <button
-                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-9 h-9 shadow">
+                    <button id="scrollRight5"
+                        class="absolute -right-8 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-9 h-9 shadow  hidden lg:block">
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
 
             </div>
+
 
             <!-- Right: Product Details -->
             <div class="flex flex-col gap-3">
@@ -382,29 +403,29 @@
                     </div>
 
                     <!-- Star rating bars -->
-                    <div class="mt-8 space-y-2 text-sm text-gray-700 w-full max-w-xs">
+                    <div class="lg:mt-8 mt-4 space-y-2 text-sm text-gray-700 w-full max-w-xs">
                         <div class="flex items-center justify-between">
-                            <span class="w-28 text-right">5 Star</span>
+                            <span class="lg:w-28 text-right">5 Star</span>
                             <div class="flex-1 h-2 bg-red-500 rounded mx-2"></div>
                             <span>2</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="w-28 text-right">4 Star</span>
+                            <span class="lg:w-28 text-right">4 Star</span>
                             <div class="flex-1 h-2 bg-gray-200 rounded mx-2"></div>
                             <span>0</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="w-28 text-right">3 Star</span>
+                            <span class="lg:w-28 text-right">3 Star</span>
                             <div class="flex-1 h-2 bg-gray-200 rounded mx-2"></div>
                             <span>0</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="w-28 text-right">2 Star</span>
+                            <span class="lg:w-28 text-right">2 Star</span>
                             <div class="flex-1 h-2 bg-gray-200 rounded mx-2"></div>
                             <span>0</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="w-28 text-right">1 Star</span>
+                            <span class="lg:w-28 text-right">1 Star</span>
                             <div class="flex-1 h-2 bg-gray-200 rounded mx-2"></div>
                             <span>0</span>
                         </div>
@@ -585,22 +606,22 @@
                     </p>
 
                     <!-- Rating Stars -->
-                    <div class="grid grid-col-1 md:grid-cols-2 place-content-center  gap-4 mb-4">
-                        <div class="flex  gap-5 lg:text-md text-sm lg:justify-start justify-between">
+                    <div class="grid grid-col-1 md:grid-cols-2 place-content-center  lg:gap-4 md:gap-x-16 gap-4 mb-4">
+                        <div class="flex  gap-5 lg:text-md text-sm md:justify-start justify-between">
                             <p class="font-medium">Overall Rating</p>
                             <div class="text-yellow-400">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </div>
-                        <div class="flex gap-5 lg:text-md text-sm lg:justify-start justify-between">
+                        <div class="flex gap-5 lg:text-md text-sm md:justify-start justify-between">
                             <p class="font-medium">Service</p>
                             <div class="text-yellow-400">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </div>
-                        <div class="flex gap-5 text-sm lg:text-md lg:justify-start justify-between">
+                        <div class="flex gap-5 text-sm lg:text-md md:justify-start justify-between">
                             <p class="font-medium">Hospitality</p>
                             <div class="text-yellow-400">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -608,7 +629,7 @@
                             </div>
                         </div>
 
-                        <div class="flex gap-5 lg:text-md text-sm lg:justify-start justify-between">
+                        <div class="flex gap-5 lg:text-md text-sm md:justify-start justify-between">
                             <p class="font-medium">Pricing</p>
                             <div class="text-yellow-400">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -618,11 +639,11 @@
                     </div>
 
                     <!-- Form -->
-                    <div class="flex lg:flex-row flex-col gap-4 mb-4">
+                    <div class="flex md:flex-row flex-col gap-4 mb-4">
                         <input type="text" placeholder="Name"
-                            class="w-full md:w-1/2 lg:p-3 p-1 text-sm lg:text-md border rounded placeholder-[#DADADA]" />
+                            class="w-full md:w-1/2 md:p-3  p-1 text-sm lg:text-md border rounded placeholder-[#DADADA]" />
                         <input type="email" placeholder="Email"
-                            class="w-full md:w-1/2 lg:p-3 p-1 text-sm lg:text-md border rounded placeholder-[#DADADA]" />
+                            class="w-full md:w-1/2 md:p-3 p-1 text-sm lg:text-md border rounded placeholder-[#DADADA]" />
                     </div>
                     <textarea placeholder="Review"
                         class="w-full h-32 p-2 border rounded text-sm lg:text-md placeholder-[#DADADA] mb-4"></textarea>
@@ -640,7 +661,7 @@
 
                     <!-- Submit -->
                     <button
-                        class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded mt-5 lg:text-sm text-xs">Submit
+                        class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded mt-5 md:mb-5 lg:mb-0 mb-0 lg:text-sm text-xs">Submit
                         Review</button>
                 </div>
             </div>
@@ -947,7 +968,7 @@
         </div>
 
 
-        <footer class="bg-gray-900 text-white mt-44 pt-24 relative z-0">
+        <footer class="bg-gray-900 text-white mt-36 pt-36 relative z-0">
             <div class="max-w-7xl mx-auto px-4 plg:y-10 py-5">
 
                 <div class="mb-8">
