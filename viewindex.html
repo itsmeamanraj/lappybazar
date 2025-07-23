@@ -40,7 +40,7 @@
     <section>
         <nav>
             <!-- Navbar (Header) -->
-                     <header id="mainHeader"
+            <header id=""
                 class="fixed top-0 left-0 w-full z-50 flex justify-between lg:items-center items-start px-6 py-4 shadow-md bg-[#000] transition-colors duration-300">
                 <!-- Left Section -->
                 <div class=" flex gap-4 justify-center items-center ">
@@ -81,7 +81,7 @@
                 </div>
 
                 <!-- Hamburger Icon (Mobile) -->
-                <button id="bar" class="flex justify-center items-center w-10 h-10 rounded-full bg-[#FF3131] md:hidden">
+                <button id="bar" class="flex justify-center items-center w-10 h-10 rounded-full bg-[#FF3131] lg:hidden">
                     <i class="fa-solid fa-bars text-xl text-white"></i>
                 </button>
 
@@ -91,7 +91,7 @@
 
             <!-- Mobile Header -->
             <div id="sideMenu"
-                class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col gap-4 p-6">
+                class="fixed top-0 right-0 h-full w-64 md:w-96 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col gap-4 p-6">
 
                 <div class="flex justify-between items-center">
 
@@ -105,38 +105,30 @@
                     <a href="#" class="hover:text-blue-600">Reseller</a>
                 </nav>
 
-                <div class="">
-                    <button class="flex items-center gap-2    py-1 ">
-                        <!-- <img src="/lappybazar/image/current-Icons.png" alt="Location Icon" class="w-6 h-6" /> -->
-                            <div class="bg-[#FF3131] border-none rounded-xl">
-                        <button class="flex items-center gap-2  rounded-xl px- py-1 ">
-                            
-                            <div class="bg-[#FF3131] flex justify-center items-center rounded-lg">
-                                <img src="./image/current-Icons.png" alt="Location Icon" class="w-6 h-6" />
-                               <div>
-                                 <p class="text-xs font-medium text-[#fff]">Click Here to Find Nearby Listings</p>
-                                <p class="text-xs text-[#fff]">Fetching Location</p>
-                               </div>
-                            </div>
-                        </button>
-                    </div>
-                    </button>
-                    <button
-                        class="flex gap-2 justify-center items-baseline  px-4 py-2 rounded bg-[#FFC862] text-[#000]">
-                        <i class="fa-regular fa-user w-5 h-5"></i>
-                        <p class="text-md font-medium ">Login/Sign Up</p>
-                    </button>
-                    <button
-                        class="bg-[#FF3131] text-white text-md font-medium  px-4 py-2 rounded flex justify-center items-center gap-2">
-                        <i class="fa-solid fa-plus"></i> Add Listing
+                <div class="flex items-center justify-center px-4 py-2">
+                    <button class="flex items-center gap-3 bg-[#FF3131] rounded-xl px-4 py-2">
+                        <img src="./image/current-Icons.png" alt="Location Icon" class="w-6 h-6" />
+                        <div class="text-left">
+                            <p class="text-xs font-medium text-white">Click Here to Find Nearby Listings</p>
+                            <p class="text-xs text-white">Fetching Location</p>
+                        </div>
                     </button>
                 </div>
-            </div>
 
+                </button>
+                <button class="flex gap-2 justify-center items-baseline  px-4 py-2 rounded bg-[#FFC862] text-[#000]">
+                    <i class="fa-regular fa-user w-5 h-5"></i>
+                    <p class="text-md font-medium ">Login/Sign Up</p>
+                </button>
+                <button
+                    class="bg-[#FF3131] text-white text-md font-medium  px-4 py-2 rounded flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-plus"></i> Add Listing
+                </button>
+            </div>
         </nav>
     </section>
 
-    <section class="py-28  custom_container">
+    <section class="pt-28 pb-14 lg:pb-20  custom_container">
         <div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
                 <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
@@ -802,6 +794,7 @@
         </div>
     </section>
 
+
     <div class="relative ">
 
         <div
@@ -821,7 +814,7 @@
         </div>
 
 
-        <footer class="bg-gray-900 text-white mt-28 pt-24 relative z-0">
+        <footer class="bg-gray-900 text-white mt-8 pt-32 relative z-0">
             <div class="max-w-7xl mx-auto px-4 plg:y-10 py-5">
 
                 <div class="mb-8">
@@ -829,23 +822,37 @@
                 </div>
 
 
-                <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-8 lg:place-items-center">
+                <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 lg:place-items-start">
 
                     <div>
                         <strong class="block mb-2 lg:text-lg text-sm text-yellow-400">Contact Us</strong>
-                        <div class="text-xs lg:text-sm">
-                            <p class=" mb-1">D-29, Office No. 3, Ground Floor, Sector 3, Noida, UP 201301</p>
-                            <p class="text-sm mb-1">+91 89297 10102</p>
-                            <p class="text-sm mb-1">lapybazar@gmail.com</p>
-                            <p class="text-sm underline text-red-400 cursor-pointer">MSME Download Certificate</p>
+                        <div class="text-xs lg:text-[15px]">
+                            <div class="flex justify-start gap-3 items-start  text-white p-2">
+                                <i class="fa-solid fa-location-dot text-xl mr-2"></i>
+                                <p class="mb-1">D-29, Office No. 3, Ground Floor, Sector 3, Noida, UP 201301</p>
+                            </div>
+
+                            <div class="flex justify-start gap-3 items-start  text-white p-2">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <p class="text-sm mb-1">+91 89297 10102</p>
+
+                            </div>
+                            <div class="flex justify-start gap-3 items-start  text-white p-2">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p class="text-sm mb-1">lapybazar@gmail.com</p>
+                            </div>
+                            <div class="flex justify-start gap-3 items-start  text-white p-2">
+                                <i class="fa-solid fa-book-bookmark"></i>
+                                <p class="text-sm  ">MSME Download Certificate</p>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Useful Links -->
-                    <div>
+                    <div class="flex flex-col gap-4">
                         <strong class="block mb-2 lg:text-lg text-sm text-yellow-400">Useful Links</strong>
-                        <div class="lg:text-sm text-xs">
-                            <ul class="space-y-1 text-sm">
+                        <div class="lg:text-[15px]  text-xs">
+                            <ul class="space-y-3 lg:text-[15px] text-sm">
                                 <li>Reseller</li>
                                 <li>Dell Second Hand Laptop</li>
                                 <li>Lenovo Second Hand Laptop</li>
@@ -855,7 +862,7 @@
                     </div>
 
                     <!-- Newsletter -->
-                    <div>
+                    <div class="">
                         <strong class="block mb-2 lg:text-lg text-sm text-yellow-400">Newsletter</strong>
                         <p class="text-xs lg:text-sm">We don’t send spam so don’t worry.</p>
                     </div>
